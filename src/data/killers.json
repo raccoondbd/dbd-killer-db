@@ -629,7 +629,6 @@
   {
     "id": "unknown",
     "displayName": "アンノウン",
-    "isNew": true,
     "imageName": "K35_TheUnknown_Portrait.webp",
     "description": "本名：なし\n\n基本情報\n心音32m、移動速度4.6m/s。正体不明の怪異。幻覚と爆発弾で攻撃する。",
     "youtubePlaylistId": "PLp1FBdXwpJDVooBzFm-uX7n3_fK8HTPY_",
@@ -670,7 +669,6 @@
   {
     "id": "houndmaster",
     "displayName": "ハウンドマスター",
-    "isNew": true,
     "imageName": "K38_TheHoundmaster_Portrait.webp",
     "description": "本名：ポーシャ・メイ\n\n基本情報\n心音32m、移動速度4.6m/s。犬を操り索敵と攻撃を行う。",
     "youtubePlaylistId": "PLp1FBdXwpJDW4PG2aGy7Da6ScJ_uZfTzl",
