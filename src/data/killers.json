@@ -1,0 +1,734 @@
+[
+  {
+    "id": "trapper",
+    "displayName": "トラッパー",
+    "imageName": "K01_TheTrapper_Portrait.webp",
+    "description": "本名：エヴァン・マクミラン\n\n基本情報\n心音32m、移動速度4.6m/s。\nトラバサミを設置して生存者を拘束する能力を持つ。試合開始時に2個のトラバサミを所持しており、マップ上には解除されたトラバサミが8個出現する。トラバサミのオーラは常に視認できる。\n\nトラバサミ\n近くにあるトラバサミの上でインタラクトすると回収できる。所持できるトラバサミは最大2個。能力ボタンを長押しするとトラバサミを設置でき、設置時間は2.5秒。このうち1秒はしゃがんでから立ち上がるモーションに使われるため、設置時間短縮系アドオンの効果が適用されるのは実質1.5秒分のみ。設置すると5秒間移動速度が7.5%上昇する。\n\n設置されたトラバサミ\n作動状態のトラバサミを踏んだ生存者は拘束され、その場から動けなくなる。健康状態の生存者は負傷状態になる。拘束された生存者は自力で脱出を試みるか、他の生存者に助けてもらうことで解除できる。脱出試行時間は1.8秒で、成功確率は16.67%。最大6回の試行後は必ず脱出に成功する。\n\n立ち回り\n守りたい発電機をあらかじめ決め、その周辺、特にトラッパーが接近した際に生存者が逃げ込みやすい場所に罠を設置する。\n基本は発電機の巡回を軸に立ち回る。\n罠にかかった生存者は、守っている発電機側の最奥のフックに吊るし、\nその救助ルートや逃走ルートに罠を仕掛けてダブルアップを狙う。\n最低でも救助交換を狙い、ダブルアップの試行回数を増やしていくことが重要。\n\nTIPS・コツ\n板や窓の前に罠を仕掛けるだけでなく、生存者が通りやすいルートに罠を設置することで、チェイスしていない生存者にも常にプレッシャーを与えることができる。\n特に救助ルートに罠を置くことで、状況次第では生存者を一気に壊滅状態へ追い込むことも可能。\n\n強力なアドオン\n・罠にかかった生存者を攻撃せずとも瀕死状態にできる「砥石」\n・罠が自動で開くようになる「玉虫色の砥石」",
+    "youtubePlaylistId": "PLp1FBdXwpJDWIIuMvqW_0dnE8VSFY4jdq&pp=gAQB",
+    "enjoyPlaylistId": "PLp1FBdXwpJDW0joZ8w48pAopo72RjiXgI&pp=gAQB",
+    "specialists": [
+      {
+        "name": "シカブッタ",
+        "url": "https://www.youtube.com/@%E3%82%B7%E3%82%AB%E3%83%96%E3%83%83%E3%82%BF%E5%8A%87%E5%A0%B4"
+      },
+      {
+        "name": "小動物",
+        "url": "https://www.youtube.com/@syoudoubutu874"
+      },
+      {
+        "name": "エクスカリバーあさだ",
+        "url": "https://www.twitch.tv/maou_asada"
+      }
+    ]
+  },
+  {
+    "id": "wraith",
+    "displayName": "レイス",
+    "imageName": "K02_TheWraith_Portrait.webp",
+    "description": "本名：フィリップ・オジョモ\n\n基本情報\n心音32m、移動速度4.6m/s。\n嘆きの鐘を使用して透明化する能力を持つ。試合開始時は透明状態で開始し、この状態では探知不可状態となり移動速度が6.0m/sに上昇する。\n\n透明化\n透明状態では20m以上離れた生存者から完全に見えなくなる。20m以内では断続的に姿が見える。しばらく静止していると完全に透明になる。透明状態では攻撃や生存者へのインタラクトはできないが、オブジェクトへのインタラクトは可能。\n\n透明化解除\n能力ボタンを長押しして嘆きの鐘を鳴らすことで透明状態を解除できる。解除には3秒かかり、解除完了後1秒間は移動速度が150%に上昇する。この間の移動速度は6.9m/sとなる。\n\n透明化や解除時に鳴る鐘の音は24m以内の生存者に聞こえ、移行音は40m以内まで聞こえる。\n\nTIPS・コツ\n青色以上の「俊足の狩人」アドオンを装備すると、透明化状態で生存者の真後ろまで接近し、解除ブーストと溜め攻撃を組み合わせることで負傷を取ることができる。（直線ならアドオンなしでも可能？要検証）\n\n透明化中に板を何度も往復して時間を稼がれた場合、透明化を解除するふりをするか、板破壊ボタンを生存者より早く連打することで板を破壊して対応する。窓の往復は生存者の左からレイスの体をタイミングよくねじ込むことでボディブロックできる。\n\n透明化中の高い移動速度を活かし、窓や板をボディブロックしてチェイスを有利に進めることが重要。",
+    "youtubePlaylistId": "PLp1FBdXwpJDUjp6IWFme9WO--6zAcD_4F",
+    "enjoyPlaylistId": "PLp1FBdXwpJDW7pKbZhMJEhimpndRAWRkN",
+    "specialists": []
+  },
+  {
+    "id": "hillbilly",
+    "displayName": "ヒルビリー",
+    "imageName": "K03_TheHillbilly_Portrait.webp",
+    "description": "本名：マックス・トンプソンJr\n\n基本情報\n心音40m、移動速度4.6m/s。\nチェーンソーを使用して高速突進攻撃を行う能力を持つ。能力ボタンを長押ししてチェーンソーをチャージすると突進を開始し、命中した生存者に2ダメージを与える。\n\nチェーンソースプリント\nチェーンソー突進中の移動速度は10.12m/sに上昇する。突進中は旋回性能が低下する。チャージ中の移動速度は3.68m/s。\n\nオーバードライブ\nチェーンソーの空ぶかしや突進を行うことでオーバードライブメーターが蓄積される。メーターが最大になると20秒間オーバードライブ状態になる。オーバードライブ中はチェーンソースプリントの速度が12m/sに上昇し、チェーンソーチャージ速度が5%上昇する。さらにチェーンソーのクールダウンが10%短縮される。\n\nチェーンソーダッシュ開始から1秒間は大きく方向転換することができる。チェーンソーの音は60m以内の生存者に聞こえる。\n\nTIPS・コツ\n発電機周囲の板を事前に消費させておくことで、タゲチェン（ターゲット変更）が非常に強力になる。\n\nチェーンソーダッシュ開始から1秒間は大きく曲がれるため、この特性を活かすことで板グルでも有利にチェイスを展開できる。",
+    "youtubePlaylistId": "PLp1FBdXwpJDWgnJ5Ko-muMYXx_CaVjuj0",
+    "enjoyPlaylistId": "PLp1FBdXwpJDVboQX5C6Gn3i-zHptJGxRJ",
+    "montagePlaylistId": "PLp1FBdXwpJDV5aL4bIiZWL8bxEhf6b2nQ",
+    "specialists": [
+      {
+        "name": "UncleStanBana",
+        "url": "https://www.twitch.tv/unclestanbana"
+      },
+      {
+        "name": "DwichaelJackson",
+        "url": "https://www.twitch.tv/dwichaeljackson"
+      }
+    ]
+  },
+  {
+    "id": "nurse",
+    "displayName": "ナース",
+    "imageName": "K04_TheNurse_Portrait.webp",
+    "description": "本名：サリー・スミッソン\n\n基本情報\n心音32m、移動速度3.85m/s。\nブリンクと呼ばれる瞬間移動能力を使い、障害物や壁を無視して移動できるキラー。連続でブリンクを行うことが可能だが、その後は疲労状態に入り一時的に行動が制限される。\n\nスペンサーの最後の息\n試合開始時にブリンクトークンを2つ所持している。能力ボタンを長押ししてブリンクをチャージし、ボタンを離すことでブリンクを発動する。ブリンクを1回使用するごとにトークンを1消費する。\n\nブリンク\n直線方向に最大20mまで瞬間移動できる。壁や障害物を無視して移動できる。視点を近い位置に向けることで移動距離を短く調整することが可能。最大速度13.33m/s。また、天井や床に視点を向けることで上下階への移動も可能。\n\nチェインブリンク\n最初のブリンク後、トークンが残っている場合は1.5秒間チェインブリンクが可能になる。この間に再度ブリンクを行うことで最大12mの追加ブリンクができる。\n\n疲労\nチェインブリンクの受付時間が終了するか、最後のブリンクを行うと疲労状態に入る。疲労時間は使用したブリンク回数に応じて2〜3秒となる。\n\nTIPS・コツ\n1ブリンク目で「2ブリンク目で攻撃できる位置」に移動し、2ブリンク目で攻撃することが基本。\n2ブリンク目で攻撃が確定しない場合は無理に振らず、スタン（疲労）状態になってブリンクを回復してから、次の2ブリンクで攻撃を狙う方が多くの場合有利になる。\n床にAIMを合わせてブリンクすることで手前にブリンクできる「床ブリンク」も細かい距離調整ができるため有効。",
+    "youtubePlaylistId": "PLp1FBdXwpJDUr_k__nig9NZt3GfzkgHJe",
+    "specialists": [
+      {
+        "name": "SupaAlf",
+        "url": "https://www.twitch.tv/supaalf"
+      },
+      {
+        "name": "たたこま",
+        "url": "https://www.youtube.com/@%E3%81%9F%E3%81%9F%E3%81%93%E3%81%BE"
+      },
+      {
+        "name": "sk_ygaming",
+        "url": "https://www.twitch.tv/sk_ygaming"
+      },
+      {
+        "name": "KINGらいおん",
+        "url": "https://www.youtube.com/@KINGLionDao"
+      },
+      {
+        "name": "Laculan",
+        "url": "https://www.twitch.tv/laculan"
+      }
+    ]
+  },
+  {
+    "id": "shape",
+    "displayName": "シェイプ",
+    "imageName": "K05_TheShape_Portrait.webp",
+    "description": "本名：マイケル・マイヤーズ\n\n基本情報\nストーカーモード\n探知不可状態。移動速度は4.2m/s。\n生存者を凝視することで凝視ゲージをチャージできる。\n凝視ゲージは100％まで貯めない場合、20秒後に50％まで自動的に減少する。\n静止している状態の方が多く凝視ゲージを獲得でき、移動しながらの凝視は0.75倍の倍率がかかる。\n\n追跡者モード\n心音16m。移動速度は4.6m/s。\n窓枠乗り越え速度が強化され1.42秒になる（通常1.7秒）。\nさらに破壊速度、スタン時間、攻撃距離に20％の強化が入る。\n\n邪悪の化身モード\n心音32m。持続時間は60秒。\n追跡者モードの強化を維持したまま、2吊りしている生存者を殺害できるようになる。\nまた「虐殺の一撃」が使用可能になる。\n\n虐殺の一撃\n移動速度7.5m/sで突進し、一撃で生存者を瀕死状態にできる。突進中は板も破壊できる。\n\nTIPS・コツ\n虐殺の一撃が邪悪の化身終了前にチャージされている場合、邪悪の化身の時間が終了しても攻撃を放つことができる。\n虐殺の一撃はチャージ途中でも発動できるため、完全に最大チャージして使うことは少なく、状況に応じて途中で放つことが多い。",
+    "youtubePlaylistId": "PLp1FBdXwpJDXOOVrcBCEWpAItPbRUFiSM",
+    "enjoyPlaylistId": "PLp1FBdXwpJDVHdWW6MPLGEg0ZDFs-1p6H",
+    "specialists": [
+      {
+        "name": "One_stalky_boi",
+        "url": "https://www.twitch.tv/one_stalky_boi"
+      }
+    ]
+  },
+  {
+    "id": "hag",
+    "displayName": "ハグ",
+    "imageName": "K06_TheHag_Portrait.webp",
+    "description": "本名：リサ・シャーウッド\n\n基本情報\n心音24m、移動速度4.4m/s。\n罠トークンを10個所持して試合を開始し、11個目の罠を設置すると古い罠から順に消える。罠の設置時間は1.9秒。\n罠は2.7m以内に生存者が近づくと発動し、ハグはその罠が48m以内にあるとき、テレポートできる。テレポート後は1秒間移動速度が低下する。\n\n立ち回り\n開幕から守りたい発電機をあらかじめ決め、その周辺に罠を散りばめながら巡回する。\n罠を発動させた生存者に負傷を入れつつ巡回を続け、罠の数を増やしていく。\n負傷した生存者が罠を発動してダウンが取れる状況を待つか、有利なチェイスポジションに追い込んで短いチェイスでダウンを取る。\nダウンを取った生存者は守っている発電機側の最奥のフックに吊るし、フック下や救助ルートに罠を設置し、救助事故を狙う。\n罠が発動した瞬間にすぐテレポートできるよう、能力ボタンを連打しながら立ち回ることが基本となる。\n\nTIPS・コツ\n罠から最速で出現できれば、罠を発動して即座に離れた生存者以外には確定で負傷を与えることができる。\n負傷をばらまきながら生存者の回復速度や位置を観察することで、セルフケアの有無を推測でき、救助事故を誘発しやすくなる。\nハグはチェイス性能が低いため、罠発動以外で攻撃する場面は少ないほど良い。\n発動した罠の位置は他の生存者も通る可能性が高いため、同じ場所に再設置するのも有効。基本の流れは「罠発動 → 即攻撃 → 罠再設置」であり、長いチェイスを行う場面は少ない。\n\n強力なアドオン\n・ テレポートの距離制限がなくなり、発動していない罠にもテレポートできるようになる「ミント柄のぼろきれ」\n・サバイバーに罠の発動が通知されなくなる「錆びた枷」",
+    "youtubePlaylistId": "PLp1FBdXwpJDWoznEMYGvCZUz7wp-Z1Yk4",
+    "enjoyPlaylistId": "PLp1FBdXwpJDUc_SejhkglE7cHAvCr9TsQ",
+    "specialists": [
+      {
+        "name": "WAO",
+        "url": "https://www.youtube.com/@wao3718"
+      },
+      {
+        "name": "skullandhope",
+        "url": "https://www.twitch.tv/skullandhope"
+      },
+      {
+        "name": "tauruslehane",
+        "url": "https://www.twitch.tv/tauruslehane"
+      }
+    ]
+  },
+  {
+    "id": "doctor",
+    "displayName": "ドクター",
+    "imageName": "K07_TheDoctor_Portrait.webp",
+    "description": "本名：ハーマン・カーター\n\n基本情報\n心音32m、移動速度4.6m/s。\nドクターは電撃攻撃によって生存者に「狂気」を付与する能力を持つ。\n狂気にはTier I〜IIIの3段階があり、Tierが上がるほど生存者に強い妨害効果が発生する。\n狂気は自然に解除されることはなく、生存者が「正気を取り戻す」を行うことでTier Iまで戻すことができる。\n\n狂気Tier I\nスキルチェックの33％が狂気スキルチェックになる。\n\n狂気Tier II\nスキルチェックの66％が狂気スキルチェックになる。\n幻覚として偽ドクターが出現するようになる。\n\n狂気Tier III\nスキルチェックが100％狂気スキルチェックになる。\n一定時間ごとに叫び声を上げ、位置が通知される。\n偽ドクターの幻覚をドクターが見ることができるようになる。\nアイテムの使用ができなくなる。\n一部のインタラクションができなくなる。\n\nショック療法\n前方に電撃を放つ能力。射程12m。チャージ中の移動速度は3.08m/s。命中までの遅延は0.8秒。\n命中した生存者は狂気が0.5Tier増加し、叫び声を上げて行動が中断される。\nさらに2.5秒間、板や窓などのインタラクションができなくなる。\n\n放電爆破\n心音範囲全体に電撃を放つ能力。\nチャージ中の移動速度は2.99m/s。\n命中した生存者は狂気が1Tier増加し、叫び声を上げて位置が通知される。クールダウンは、範囲内に生存者がいない場合30秒、範囲内に生存者がいる場合45秒。",
+    "youtubePlaylistId": "PLp1FBdXwpJDXtFFISwW3exXJXY5L1oAey",
+    "enjoyPlaylistId": "PLp1FBdXwpJDWrmJx_kucV4yGJCyFSPc2Y",
+    "specialists": [
+      {
+        "name": "HermanTheDoctor",
+        "url": "https://www.twitch.tv/hermanthedoctor"
+      }
+    ]
+  },
+  {
+    "id": "huntress",
+    "displayName": "ハントレス",
+    "imageName": "K08_TheHuntress_Portrait.webp",
+    "description": "本名：アンナ\n\n基本情報\n心音20m、子守歌範囲45m、移動速度4.4m/s。\nハントレスは手斧を投げて遠距離攻撃ができる。\n試合開始時に7本の手斧を所持している。\n能力ボタンを長押しすることで手斧を構えてチャージし、離すことで投擲する。\n手斧はロッカーで補充することができる。\n手斧がないとき、ロッカー内の手斧のオーラは36m以内でハントレスに表示される。\n\n最小チャージで投げた場合の速度は25m/s。\n最大チャージで投げた場合の速度は40m/s。\n投擲後クールダウンは2秒。\nロッカーでのリロード時間は3秒。\n\n移動速度は、手斧構え中3.08m/s、投擲後クールダウン中3.74m/s。",
+    "youtubePlaylistId": "PLp1FBdXwpJDVbGXVbuXjpHqoUniDQEX6d",
+    "enjoyPlaylistId": "PLp1FBdXwpJDVkuN8FBhO_jQbPeXt4ILZG",
+    "montagePlaylistId": "PLp1FBdXwpJDVp7mWKbP3Fkm5koc2RJy5l",
+    "specialists": [
+      {
+        "name": "CoconutRTS",
+        "url": "https://www.twitch.tv/coconutrts"
+      },
+      {
+        "name": "えーちゃん",
+        "url": "https://www.youtube.com/@%E3%81%88%E3%83%BC%E3%81%A1%E3%82%83%E3%82%93%E3%83%8F%E3%83%B3%E3%83%88%E3%83%AC%E3%82%B9%E5%B0%82"
+      },
+      {
+        "name": "Ralph",
+        "url": "https://www.twitch.tv/ralph"
+      },
+      {
+        "name": "しょゆを",
+        "url": "https://www.twitch.tv/shoyuwo"
+      },
+      {
+        "name": "ふぇんりる_ハントレス",
+        "url": "https://www.twitch.tv/fenrir_huntress"
+      },
+      {
+        "name": "じす",
+        "url": "https://www.youtube.com/@Jisu_YouTube"
+      },
+      {
+        "name": "きむちゃ",
+        "url": "https://www.youtube.com/@Kimucha___"
+      }
+    ]
+  },
+  {
+    "id": "cannibal",
+    "displayName": "カニバル",
+    "imageName": "K09_TheCannibal_Portrait.webp",
+    "description": "本名：ババ・ソーヤー\n\n基本情報\n心音32m、移動速度4.6m/s。\nチェーンソーを使用して高速突進攻撃を行うことができる。試合開始時にトークンを3つ所持しており、チェーンソーを使用していない間は0.25c/sの速度で自動回復する。チェーンソーの音は60m以内の生存者に聞こえる。\n\nチェーンソースイープ\n能力ボタンを長押しするとチェーンソーをチャージし、2.5秒間のチェーンソースイープを行う。チャージ中の移動速度は3.45m/s。スイープ中は移動速度が徐々に上昇し、最大5.35m/sになる。命中した生存者に対しては2ダメージを与え、一度のスイープで複数の生存者に命中することができる。使用するとトークンを1つ消費する。\n\nチェーンソーダッシュ\nチェーンソースイープ中に再度能力ボタンを押すことでチェーンソーダッシュを連続で発動できる。発動すると能力ゲージの持続時間がリセットされ、スイープ時間が延長される。消費したトークン1つにつきクールダウン時間が1秒増加する。\n\n癇癪\nチェーンソーを空ぶかしすると癇癪メーターが毎秒33%ずつ増加する。メーターが最大になるか、チェーンソースイープ中に障害物へ衝突すると癇癪状態になる。癇癪は最低3秒間持続し、近くの生存者に対して連続攻撃を行い2ダメージを与える。トークンを消費している場合、消費したトークン1つにつき持続時間が1秒延長される。癇癪中は移動速度が90%低下し、残っているトークンはすべて失われる。",
+    "youtubePlaylistId": "PLp1FBdXwpJDXzSVHoUJBxPCjBDb-nfTyD",
+    "enjoyPlaylistId": "PLp1FBdXwpJDX0k7IVl9qlhAuh_ECX7kjR",
+    "specialists": [
+      {
+        "name": "くろすと",
+        "url": "https://www.youtube.com/@%E3%81%8F%E3%82%8D%E3%81%99%E3%81%A8dbd"
+      },
+      {
+        "name": "Epidemy",
+        "url": "https://www.twitch.tv/epidemy"
+      },
+      {
+        "name": "Interista",
+        "url": "https://www.twitch.tv/interista1523"
+      }
+    ]
+  },
+  {
+    "id": "nightmare",
+    "displayName": "ナイトメア",
+    "imageName": "K10_TheNightmare_Portrait.webp",
+    "description": "本名：フレディ・クルーガー\n\n基本情報\n心音32m、移動速度4.6m/s。\n覚醒状態の生存者からは完全に姿が見えず、距離によって断続的に視認される特殊なステルス能力を持つ。生存者は時間経過によって眠りに落ち、夢の世界に入ると複数の妨害効果を受ける。\n\nドリームデーモン\n覚醒状態の生存者に対して姿が隠蔽される能力。32m以上離れている生存者からは完全に見えず、16〜32mの距離では断続的に姿が見える。16m以内では完全に視認される。\n\nマイクロスリープ\n覚醒状態の生存者は60秒かけて徐々に眠りに落ちる。目覚まし時計で目覚めた生存者は30秒間この効果を受けない。\n\n夢の世界\n眠った生存者は夢の世界に入り、無感覚状態になる。治療行動を行うと殺人鬼の本能が発動し位置が通知される。通常攻撃を受けた生存者も即座に夢の世界へ引き込まれる。\n\n目覚める\n生存者はスキルチェックの失敗、覚醒している生存者による5秒間の解除行動、目覚まし時計を2秒間操作することで目覚めることができる。瀕死状態になることでも夢の世界から離脱する。\n\nドリームスネア\n能力ボタンを長押しして0.35秒チャージするとドリームスネアを設置できる。発射速度は12m/s、最大射程は18m。命中した生存者は状態に応じて異なる効果を受ける。覚醒状態の生存者はマイクロスリープタイマーが30秒進行し、眠っている生存者は4.5秒間移動速度が12%低下する。クールダウンは7秒。\n\nドリームパレット\n最大8個のドリームパレットを生成できる。能力を使用して24m以内の有効な位置に設置できる。設置されたドリームパレットは破裂させることができ、1.5秒の遅延後に半径3.5mの範囲で効果を発生させる。範囲内の覚醒状態の生存者はマイクロスリープタイマーが60秒進行し、眠っている生存者はダメージを受ける。\n\nドリームプロジェクション\n発電機にテレポートする能力。能力ゲージが満タンのときに0.5秒以上チャージすると発動でき、発動完了まで2.5秒かかる。テレポート先の8m以内にいる生存者は殺人鬼の本能が3秒間発動し、覚醒状態の生存者はマイクロスリープタイマーが15秒進行する。クールダウンは30秒で、眠っている生存者1人につき15%短縮され最大60%まで減少する。",
+    "youtubePlaylistId": "PLp1FBdXwpJDV12-XsPjKG0Xa1Exgh39OO",
+    "specialists": [
+      {
+        "name": "WesLv",
+        "url": "https://www.twitch.tv/weslv"
+      }
+    ]
+  },
+  {
+    "id": "pig",
+    "displayName": "ピッグ",
+    "imageName": "K11_ThePig_Portrait.png",
+    "description": "本名：アマンダ・ヤング\n\n基本情報\n心音24m、移動速度4.6m/s。\nステルス移動と突進攻撃を持ち、さらに生存者に逆トラバサミを装着して処刑を狙う能力を持つ。試合開始時に4個の逆トラバサミを所持し、マップ上には5個のジグソーボックスが生成される。\n\nしゃがみ\n能力ボタンを押すことでしゃがみ状態に移行する。しゃがみ中は3秒かけて徐々に探知不可状態となり、移動速度は4.0m/sになる。再度能力ボタンを押すことで通常状態に戻る。\n\n突進攻撃\nしゃがみ状態で攻撃ボタンを長押しするとチャージ後に突進攻撃を行う。突進中の移動速度は7.1m/sで、2.3秒間持続する。発動後は自動的にしゃがみ状態が解除される。\n\n逆トラバサミ\n瀕死状態の生存者の上で能力ボタンを押すことで未作動の逆トラバサミを装着できる。発電機が1台修理されると、装着されている未作動トラップが起動する。起動したトラップには150秒のデスタイマーが設定され、時間が経過すると生存者を即死させる。タイマーは生存者が瀕死状態、フック状態、または追跡中の間は停止する。\n\nジグソーボックス\nトラップを装着された生存者はジグソーボックスを調べることで解除用の鍵を探すことができる。解除時間は12秒。解除には1〜4回の探索が必要となり、成功するとトラップが取り外される。試合全体で12回の解除回数になるように振り分けられる。逆トラバサミをアドオンで追加しても12回の解除回数は増加しない。ジグソーボックスのオーラはトラップを装着された生存者に常に表示される。トラップが起動している状態で脱出ゲートから脱出しようとすると処刑されるが、ハッチからは脱出可能。",
+    "youtubePlaylistId": "PLp1FBdXwpJDXxA9JiOTNTn72W9QShAKa7",
+    "specialists": [
+      {
+        "name": "DrussnBubba",
+        "url": "https://www.twitch.tv/drussnbubba"
+      }
+    ]
+  },
+  {
+    "id": "clown",
+    "displayName": "クラウン",
+    "imageName": "K12_TheClown_Portrait.webp",
+    "description": "本名：ケネス・チェイス\n\n基本情報\n心音32m、移動速度4.6m/s。\nガスボトルを投げて生存者に妨害効果を与える能力を持つ。試合開始時に6本のボトルを所持しており、トニックと解毒剤を切り替えて使用できる。ボトルはいつでもリロードでき、リロード時間は2.5秒で、その間の移動速度は2.3m/sになる。\n\n寸劇のトニック\n能力ボタンでボトルを投擲する。ボトルは命中するとガスを放出し、生存者に妨害効果を与える。ガスに触れた生存者は視界が歪み、咳き込みが発生し、高速乗り越えができなくなる。さらに移動速度が1.6秒間14%低下する。この効果はガスから離れた後も1秒間持続する。ガスは10秒間残る。\n\n寸劇の解毒剤\nサブ能力ボタンでトニックと切り替えて使用できる。投擲されたボトルは白いガスを発生させ、1.6秒後に黄色に変化する。ガスに触れたプレイヤーは6秒間移動速度が14%上昇する。活性状態のリロード速度2.57m/s。生存者担ぎ時速度4.12m/s。移動速度5.15m/s。\n\n中和\nトニックと解毒剤のガスが接触すると互いの効果を打ち消す。片方のガスからもう一方のガスに入ると、前の効果は解除され新しい効果が適用される。",
+    "youtubePlaylistId": "PLp1FBdXwpJDUpCx6YVbcuaWJMSf1VYpVH",
+    "enjoyPlaylistId": "PLp1FBdXwpJDWJp77es5YPHqS42bVmMv9u",
+    "specialists": []
+  },
+  {
+    "id": "spirit",
+    "displayName": "スピリット",
+    "imageName": "K13_TheSpirit_Portrait.webp",
+    "description": "本名：山岡 凜\n\n基本情報\n心音24m、移動速度4.4m/s。フェージングで姿を消し、音を頼りに移動して奇襲する。",
+    "youtubePlaylistId": "PLp1FBdXwpJDVWIObbHKlpCrjdRf8u1u28",
+    "enjoyPlaylistId": "PLp1FBdXwpJDXae2blYR9o3cHsWl2iJ24b",
+    "otherLinks": [
+      {
+        "label": "ガイド350p",
+        "url": "https://onedrive.live.com/:w:/g/personal/cc64f069d4b32842/IQAFHC1N5xTSSJRD40blygGxAfQe4IfTGrDE2OUWO2lp4rA?rtime=Ange1QJ93kg&redeem=aHR0cHM6Ly8xZHJ2Lm1zL3cvYy9jYzY0ZjA2OWQ0YjMyODQyL0VRVWNMVTNuRk5KSWxFUGpSdVhLQWJFQjlCN2doOU1hc01UWTVSWTdhV25pc0E_ZT00bDlnN0c"
+      }
+    ],
+    "specialists": [
+      {
+        "name": "Remylea",
+        "url": "https://www.twitch.tv/Remylea"
+      },
+      {
+        "name": "ゴーストバスター田中",
+        "url": "https://www.youtube.com/@%E3%82%B4%E3%83%BC%E3%82%B9%E3%83%88%E3%83%90%E3%82%B9%E3%82%BF%E3%83%BC%E7%94%B0%E4%B8%AD"
+      },
+      {
+        "name": "ひがりん",
+        "url": "https://www.youtube.com/@%E3%81%B2%E3%81%8C%E3%82%8A%E3%82%93-s2i"
+      }
+    ]
+  },
+  {
+    "id": "legion",
+    "displayName": "リージョン",
+    "imageName": "K14_TheLegion_Portrait.webp",
+    "description": "本名：フランク・モリソン\n　　　ジュリー・コステル\n　　　スージー\n　　　ジョーイ\n\n基本情報\n心音32m、移動速度4.6m/s。高速で走り回り、次々とサバイバーを切りつけ深手状態にする。",
+    "youtubePlaylistId": "PLp1FBdXwpJDVhhfc7iNjAnTrrvfLDtm_R",
+    "enjoyPlaylistId": "PLp1FBdXwpJDUBbbKlxHULchDoj8c8S2pF",
+    "specialists": [
+      {
+        "name": "Tatariu",
+        "url": "https://www.twitch.tv/Tatariu"
+      }
+    ]
+  },
+  {
+    "id": "plague",
+    "displayName": "プレイグ",
+    "imageName": "K15_ThePlague_Portrait.webp",
+    "description": "本名：アディリス\n\n基本情報\n心音32m、移動速度4.6m/s。疫病を吐きかけ、感染させて負傷・衰弱状態にする。",
+    "youtubePlaylistId": "PLp1FBdXwpJDUR5YlMI8IYileRZqFDTvFg",
+    "specialists": [
+      {
+        "name": "Magi_n7",
+        "url": "https://www.twitch.tv/magi_n7"
+      }
+    ]
+  },
+  {
+    "id": "ghostface",
+    "displayName": "ゴーストフェイス",
+    "imageName": "K16_TheGhostFace_Portrait.webp",
+    "description": "本名：ダニー・ジョンソン\n\n基本情報\n心音24m、移動速度4.6m/s。『スクリーム』のゴーストフェイス。物陰から凝視して無防備状態を付与する。",
+    "youtubePlaylistId": "PLp1FBdXwpJDX3E7H30ODz2lfRyeSNd86N",
+    "enjoyPlaylistId": "PLp1FBdXwpJDWA41UvV_wldajNDil8bBp9",
+    "specialists": [
+      {
+        "name": "のんぽり",
+        "url": "https://www.youtube.com/@%E3%81%AE%E3%82%93%E3%81%BD%E3%82%8A"
+      },
+      {
+        "name": "Stalked",
+        "url": "https://www.twitch.tv/stalkedd"
+      },
+      {
+        "name": "氾濫するふんどし",
+        "url": "https://www.youtube.com/@%E3%81%B5%E3%82%93%E3%81%A9%E3%81%97_GhostFace"
+      }
+    ]
+  },
+  {
+    "id": "demogorgon",
+    "displayName": "デモゴルゴン",
+    "imageName": "K17_TheDemogorgon_Portrait.webp",
+    "description": "本名：なし\n\n基本情報\n心音32m、移動速度4.6m/s。『ストレンジャー・シングス』の怪物。ポータルによる移動とシュレッド攻撃を持つ。",
+    "youtubePlaylistId": "PLp1FBdXwpJDVORrJOI1wNs6nCxZEmq-kB",
+    "specialists": []
+  },
+  {
+    "id": "oni",
+    "displayName": "鬼",
+    "imageName": "K18_TheOni_Portrait.webp",
+    "description": "本名：山岡 凱山（かざん）\n\n基本情報\n心音32m、移動速度4.6m/s。血の球を吸収して怒り状態になり、金棒で一撃ダウンを狙う。",
+    "youtubePlaylistId": "PLp1FBdXwpJDUDfxmJsZyPSVdEn1ZwSEQZ",
+    "specialists": []
+  },
+  {
+    "id": "deathslinger",
+    "displayName": "デススリンガー",
+    "imageName": "K19_TheDeathslinger_Portrait.webp",
+    "description": "本名：ケイレブ・クイン\n\n基本情報\n心音32m、移動速度4.6m/s。銛を撃ち込み、サバイバーを引き寄せて攻撃する。",
+    "youtubePlaylistId": "PLp1FBdXwpJDWoUSOD7EALcraA97rhDAMd",
+    "montagePlaylistId": "PLp1FBdXwpJDWDfjX7FwDouns7AQrfaxBa",
+    "specialists": [
+      {
+        "name": "木彫熊の鮭の方",
+        "url": "https://www.youtube.com/@shake_no_hou"
+      },
+      {
+        "name": "Zapples",
+        "url": "https://www.twitch.tv/zzzapples"
+      }
+    ]
+  },
+  {
+    "id": "executioner",
+    "displayName": "エクセキューショナー",
+    "imageName": "K20_TheExecutioner_Portrait.webp",
+    "description": "本名：なし\n\n基本情報\n心音32m、移動速度4.6m/s。『サイレントヒル』の三角頭。地獄の罰で遠距離攻撃し、檻に送る。",
+    "youtubePlaylistId": "PLp1FBdXwpJDW3qGJcIo31BIezTfM6mRdm",
+    "specialists": [
+      {
+        "name": "すらが",
+        "url": "https://m.twitch.tv/slaga0720"
+      },
+      {
+        "name": "Awrii",
+        "url": "https://www.twitch.tv/Awrii"
+      },
+      {
+        "name": "とき△",
+        "url": "https://www.youtube.com/@%E3%81%A8%E3%81%8D%E3%81%95%E3%82%93%E3%81%8B%E3%81%8F"
+      },
+      {
+        "name": "ガマふぐ仙人",
+        "url": "https://www.twitch.tv/gama_fugu"
+      }
+    ]
+  },
+  {
+    "id": "blight",
+    "displayName": "ブライト",
+    "imageName": "K21_TheBlight_Portrait.png",
+    "description": "本名：タルボット・グライムス\n\n基本情報\n心音40m、移動速度4.6m/s。\n突進トークンを5つ所持して試合を開始し、トークンを消費して突進を行う。トークンは1つにつき2秒で回復する。\n突進攻撃はパレットを破壊することができる。\n\n突進中の振り向き角度と攻撃中の振り向き角度にはそれぞれ限界角が設定されており、2段階で視点を曲げることで大きく曲がることが可能。\n突進を重ねるごとに移動速度が上昇し、最大9.2m/sまで増加する。\n\n立ち回り\nトップクラスのチェイス力を活かし、生存者を圧倒してトンネルを完遂する立ち回りが基本となる。\n1人目をフックに吊るした後、回っている発電機へ向かい、別の生存者に負傷またはダウンを与える。\n1人目が救助される前、または救助直後にフックへ戻れるよう立ち回り、可能であれば救助者に負傷を入れる。\n我慢時間（15秒）が切れたタイミングで1人目を再度ダウンさせ、フックに吊るす。\n同様に発電機へプレッシャーを与えつつ、フックへ戻れる動きを繰り返してトンネルを完遂する。\n3人盤面では機動力を活かし、はいずり放置も選択肢に入れながら発電機の進行を阻止する。\n\nTIPS・コツ\n多くの場所で生存者より有利なチェイスを展開できるため、板や強ポジでも積極的に勝負できる。\n負傷状態の生存者に対する圧力が非常に高く、負傷をばらまく立ち回りも強力。\n突進には高確率で負傷を取れるテンプレルートが存在するため、事前に学んでおくことで上達が早くなる。\nデッド・ハードは突進トークンを使って圧をかけることで、多くの場合先に使わせることができる。\n\n強力なアドオン\n・突進トークン消費時の速度上昇がさらに強化される「破滅したカラス」\n・突進トークン消費時の速度上昇がさらに強化される「破滅したネズミ」",
+    "youtubePlaylistId": "PLp1FBdXwpJDXSyXklS9-mNUBiaS1jWyek",
+    "montagePlaylistId": "PLp1FBdXwpJDUrODXIQSlp7onY2cCkfF7i",
+    "specialists": [
+      {
+        "name": "LilithOmen",
+        "url": "https://www.youtube.com/@LilithOmen"
+      },
+      {
+        "name": "Momoseventh",
+        "url": "https://www.twitch.tv/momoseventh"
+      },
+      {
+        "name": "たむ",
+        "url": "https://www.youtube.com/@tam_3"
+      },
+      {
+        "name": "ぴーおか",
+        "url": "https://www.youtube.com/@poka111games"
+      },
+      {
+        "name": "イトコ0607",
+        "url": "https://www.youtube.com/@%E3%82%A4%E3%83%88%E3%82%B30607"
+      },
+      {
+        "name": "EX",
+        "url": "https://www.youtube.com/@ex772"
+      },
+      {
+        "name": "わら",
+        "url": "https://www.youtube.com/@%E3%82%8F%E3%82%89-y6b"
+      }
+    ]
+  },
+  {
+    "id": "twins",
+    "displayName": "ツインズ",
+    "imageName": "K22_TheTwins_Portrait.webp",
+    "description": "本名：シャルロット・デュクシャイ\nヴィクトル・デュクシャイ\n\n基本情報\n心音32m、移動速度4.6m/s。姉弟の2体を切り替えて操作し、連携して狩る。",
+    "youtubePlaylistId": "PLp1FBdXwpJDWWqWST8uFIXOBjl2YrTwO9",
+    "enjoyPlaylistId": "PLp1FBdXwpJDW2wSO8U4oVoB7TW2gCh3ih",
+    "specialists": []
+  },
+  {
+    "id": "trickster",
+    "displayName": "トリックスター",
+    "imageName": "K23_TheTrickster_Portrait.webp",
+    "description": "本名：ハク・ジウン\n\n基本情報\n心音32m、移動速度4.6m/s。ナイフを連射して裂傷ゲージを溜め、ダウンさせる。",
+    "youtubePlaylistId": "PLp1FBdXwpJDVd72knwp4yq8XgOw75zfhy",
+    "specialists": [
+      {
+        "name": "Ayano_hm",
+        "url": "https://www.twitch.tv/ayano_hm"
+      },
+      {
+        "name": "Knifyyy36",
+        "url": "https://www.twitch.tv/knifyyy36"
+      },
+      {
+        "name": "Tafie",
+        "url": "https://www.twitch.tv/tafie"
+      },
+      {
+        "name": "Wacek134",
+        "url": "https://www.twitch.tv/wacek134"
+      },
+      {
+        "name": "Revvium",
+        "url": "https://www.twitch.tv/revvium"
+      }
+    ]
+  },
+  {
+    "id": "nemesis",
+    "displayName": "ネメシス",
+    "imageName": "K24_TheNemesis_Portrait.webp",
+    "description": "本名：ネメシス T型\n\n基本情報\n心音32m、移動速度4.6m/s。『バイオハザード』の追跡者。触手攻撃とゾンビの支援で追い詰める。",
+    "youtubePlaylistId": "PLp1FBdXwpJDX6iE6nlcPHjfuW1UAMRZQu",
+    "enjoyPlaylistId": "PLp1FBdXwpJDXV7pIUXiZNzrgMK8bkp_Tq",
+    "specialists": [
+      {
+        "name": "荒海",
+        "url": "https://www.youtube.com/@araumi56"
+      }
+    ]
+  },
+  {
+    "id": "cenobite",
+    "displayName": "セノバイト",
+    "imageName": "K25_TheCenobite_Portrait.webp",
+    "description": "本名：エリオット・スペンサー\n\n基本情報\n心音32m、移動速度4.6m/s。『ヘル・レイザー』のピンヘッド。鎖で行動を制限し、箱で全体遅延をかける。",
+    "youtubePlaylistId": "PLp1FBdXwpJDWVmI6LRLTJvkHLN_lj-LZ9",
+    "specialists": []
+  },
+  {
+    "id": "artist",
+    "displayName": "アーティスト",
+    "imageName": "K26_TheArtist_Portrait.webp",
+    "description": "本名カルミナ・モーラ\n\n基本情報\n心音32m、移動速度4.6m/s。インクのカラスを放ち、壁の向こうのサバイバーを攻撃・索敵する。",
+    "youtubePlaylistId": "PLp1FBdXwpJDWcou9X22N9727exxX_u3Yk",
+    "otherLinks": [
+      {
+        "label": "攻略サイト",
+        "url": "https://game.deaf-ray.com/dbd-artist/"
+      }
+    ],
+    "specialists": [
+      {
+        "name": "星詠れい",
+        "url": "https://www.twitch.tv/hoshiyomiray"
+      }
+    ]
+  },
+  {
+    "id": "onryo",
+    "displayName": "怨霊",
+    "imageName": "K27_TheOnryo_Portrait.webp",
+    "description": "本名：山村 貞子\n\n基本情報\n心音24m、移動速度4.6m/s。『リング』の貞子。テレビを通じてテレポートし、呪いを広める。",
+    "youtubePlaylistId": "PLp1FBdXwpJDX-4F7vX-VBfo-q51oFssuV",
+    "specialists": [
+      {
+        "name": "UMA",
+        "url": "https://www.youtube.com/@UMA-y3m"
+      },
+      {
+        "name": "うずめ",
+        "url": "https://www.youtube.com/@%E3%81%86%E3%81%9A%E3%82%81"
+      }
+    ]
+  },
+  {
+    "id": "dredge",
+    "displayName": "ドレッジ",
+    "imageName": "K28_TheDredge_Portrait.webp",
+    "description": "本名：なし\n\n基本情報\n心音32m、移動速度4.6m/s。ロッカーへのテレポートと、日没による視界制限能力を持つ。",
+    "youtubePlaylistId": "PLp1FBdXwpJDV7aRadkdwBsGP2nGtSggIC",
+    "otherLinks": [
+      {
+        "label": "ガイド",
+        "url": "https://docs.google.com/document/d/1oVp9Rz-7Vi_252ufpAaTPFy-5YcvCkSi9l5rMZNJ82k/edit?tab=t.0#heading=h.ezre1edb13ee"
+      }
+    ],
+    "specialists": [
+      {
+        "name": "KMD",
+        "url": "https://www.twitch.tv/itzkmd"
+      },
+      {
+        "name": "AguseCannon",
+        "url": "https://www.twitch.tv/agusecannon"
+      }
+    ]
+  },
+  {
+    "id": "mastermind",
+    "displayName": "ウェスカー",
+    "imageName": "K29_TheMastermind_Portrait.webp",
+    "description": "本名：アルバート・ウェスカー\n\n基本情報\n心音40m、移動速度4.6m/s。『バイオハザード』のウェスカー。バウンド攻撃で捕まえて投げ飛ばす。",
+    "youtubePlaylistId": "PLp1FBdXwpJDWBc7CZZF-TZs6lmN9bqhdz",
+    "montagePlaylistId": "PLp1FBdXwpJDWHSS6ZbgcWhMwSYj1z_2lF",
+    "enjoyPlaylistId": "PLp1FBdXwpJDWap2HgtKoHnAKWWkXJRMS6",
+    "specialists": [
+      {
+        "name": "ゆうちょり",
+        "url": "https://www.youtube.com/@Yuchor1"
+      },
+      {
+        "name": "alran",
+        "url": "https://www.twitch.tv/alran"
+      },
+      {
+        "name": "FirstDBD",
+        "url": "https://www.twitch.tv/firstdbd"
+      }
+    ]
+  },
+  {
+    "id": "knight",
+    "displayName": "ナイト",
+    "imageName": "K30_TheKnight_Portrait.webp",
+    "description": "本名：ターホス・コヴァックス\n\n基本情報\n心音32m、移動速度4.6m/s。3種類の衛兵を召喚し、巡回や破壊活動を行わせる。",
+    "youtubePlaylistId": "PLp1FBdXwpJDXI6oc_VOa3r05K4-TbHxmO",
+    "specialists": [
+      {
+        "name": "REI",
+        "url": "https://www.youtube.com/@REI-jt3tj"
+      },
+      {
+        "name": "zmpixie",
+        "url": "https://www.twitch.tv/zmpixie"
+      }
+    ]
+  },
+  {
+    "id": "skull_merchant",
+    "displayName": "スカル・マーチャント",
+    "imageName": "K31_TheSkullMerchant_Portrait.webp",
+    "description": "本名：アドリアナ・イマイ\n\n基本情報\n心音24m、移動速度4.6m/s。ドローンを設置してエリアを監視し、サバイバーを追跡する。",
+    "youtubePlaylistId": "PLp1FBdXwpJDVf-eRCyo5_ttqwLDr4xDo2",
+    "otherLinks": [
+      {
+        "label": "ガイド",
+        "url": "https://docs.google.com/document/d/1iNHnZbuX2NcphQKRgpG3OwY4lKkiteQoyV8kgae6d38/mobilebasic"
+      }
+    ],
+    "specialists": []
+  },
+  {
+    "id": "singularity",
+    "displayName": "シンギュラリティ",
+    "imageName": "K32_TheSingularity_Portrait.webp",
+    "description": "本名：HUX-A7-13\n\n基本情報\n心音32m、移動速度4.6m/s。バイオポッドを設置して監視・テレポートするSFホラーキラー。",
+    "youtubePlaylistId": "PLp1FBdXwpJDWn5KPb7PZDY-ZjzAX6xjyV",
+    "specialists": [
+      {
+        "name": "チモシー",
+        "url": "https://www.twitch.tv/timoshi4"
+      }
+    ]
+  },
+  {
+    "id": "xenomorph",
+    "displayName": "ゼノモーフ",
+    "imageName": "K33_TheXenomorph_Portrait.webp",
+    "description": "本名：なし\n\n基本情報\n心音32m、移動速度4.6m/s。『エイリアン』。地下トンネルを移動し、尻尾攻撃で狙う。",
+    "youtubePlaylistId": "PLp1FBdXwpJDXAyywi0L_Kr2OY1GwVlYlG",
+    "montagePlaylistId": "PLp1FBdXwpJDUmBi6c4WapJpbZmf5YDHRB",
+    "otherLinks": [
+      {
+        "label": "ガイド300p",
+        "url": "https://docs.google.com/document/d/1-lG_Ow-OAE6kavsj-HEhh489_e-rIkrB4A43oHJL2wI/edit?tab=t.0#heading=h.she0ks4bxvlj"
+      }
+    ],
+    "specialists": [
+      {
+        "name": "theMrHeadache",
+        "url": "https://www.twitch.tv/themrheadache"
+      },
+      {
+        "name": "Cinthean",
+        "url": "https://www.twitch.tv/cinthean"
+      }
+    ]
+  },
+  {
+    "id": "good_guy",
+    "displayName": "グッドガイ",
+    "imageName": "K34_TheGoodGuy_Portrait.webp",
+    "description": "本名：チャールズ・リー・レイ\n\n基本情報\n心音32m、移動速度4.6m/s。『チャイルド・プレイ』のチャッキー。背が低くステルス性が高い。",
+    "youtubePlaylistId": "PLp1FBdXwpJDXccT2wGrNfERVldiPdkSIe",
+    "montagePlaylistId": "PLp1FBdXwpJDW9i38PLjKjksAnwbNijoaX",
+    "specialists": [
+      {
+        "name": "ぱわー",
+        "url": "https://www.youtube.com/@Guys_Power"
+      },
+      {
+        "name": "もげ太郎",
+        "url": "https://www.youtube.com/@mogemogetaro"
+      }
+    ]
+  },
+  {
+    "id": "unknown",
+    "displayName": "アンノウン",
+    "isNew": true,
+    "imageName": "K35_TheUnknown_Portrait.webp",
+    "description": "本名：なし\n\n基本情報\n心音32m、移動速度4.6m/s。正体不明の怪異。幻覚と爆発弾で攻撃する。",
+    "youtubePlaylistId": "PLp1FBdXwpJDVooBzFm-uX7n3_fK8HTPY_",
+    "enjoyPlaylistId": "PLp1FBdXwpJDWl7EDIdzME8bJM3hFkxGLW",
+    "specialists": [
+      {
+        "name": "Wispfell",
+        "url": "https://www.twitch.tv/wispfell"
+      },
+      {
+        "name": "ひろ",
+        "url": "https://www.youtube.com/@%E3%81%B2%E3%82%8Dun"
+      }
+    ]
+  },
+  {
+    "id": "lich",
+    "displayName": "リッチ",
+    "imageName": "K36_TheLich_Portrait.webp",
+    "description": "本名：ヴェクナ\n\n基本情報\n心音32m、移動速度4.6m/s。『D&D』のヴェクナ。魔法を駆使して戦う。",
+    "youtubePlaylistId": "PLp1FBdXwpJDU9MI1mf-eJHHi5Uni2c6JR",
+    "enjoyPlaylistId": "PLp1FBdXwpJDXdOCBQ43pLqHmFen92S32X",
+    "specialists": [
+      {
+        "name": "Refined",
+        "url": "https://www.twitch.tv/refined"
+      }
+    ]
+  },
+  {
+    "id": "dark_lord",
+    "displayName": "ダークロード",
+    "imageName": "K37_TheDarkLord_Portrait.webp",
+    "description": "本名：ドラキュラ\n\n基本情報\n心音32m、移動速度4.6m/s。『悪魔城ドラキュラ』のドラキュラ。変身能力を持つ。",
+    "youtubePlaylistId": "PLp1FBdXwpJDVDzwMEpaW0gkhYfZvQHvXA",
+    "specialists": []
+  },
+  {
+    "id": "houndmaster",
+    "displayName": "ハウンドマスター",
+    "isNew": true,
+    "imageName": "K38_TheHoundmaster_Portrait.webp",
+    "description": "本名：ポーシャ・メイ\n\n基本情報\n心音32m、移動速度4.6m/s。犬を操り索敵と攻撃を行う。",
+    "youtubePlaylistId": "PLp1FBdXwpJDW4PG2aGy7Da6ScJ_uZfTzl",
+    "specialists": [
+      {
+        "name": "Tボーン大佐",
+        "url": "https://www.youtube.com/@Tbone_dbd"
+      }
+    ]
+  },
+  {
+    "id": "ghoul",
+    "displayName": "グール",
+    "imageName": "K39_TheGhoul_Portrait.webp",
+    "description": "本名：金木 研\n\n基本情報\n心音40m、移動速度4.6m/s。東京グールより。圧倒的な負傷バラマキが特徴",
+    "youtubePlaylistId": "PLp1FBdXwpJDUcCp03qg_aZcn-xLPInpJB",
+    "enjoyPlaylistId": "PLp1FBdXwpJDWBjQHQqToale-MJMqydIWw",
+    "montagePlaylistId": "PLp1FBdXwpJDWWFcHEuKMbl_MXQIHQZd0e",
+    "specialists": [
+      {
+        "name": "F1ction",
+        "url": "https://www.twitch.tv/f1ctionisntreal"
+      },
+      {
+        "name": "Asuno",
+        "url": "https://www.twitch.tv/asuno"
+      },
+      {
+        "name": "ゆるゆるにこ",
+        "url": "https://www.youtube.com/@%E3%82%86%E3%82%8B%E3%82%86%E3%82%8B%E3%81%AB%E3%81%93"
+      }
+    ]
+  },
+  {
+    "id": "animatronic",
+    "displayName": "アニマトロニック",
+    "imageName": "K40_TheAnimatronic_Portrait.webp",
+    "description": "本名：ウィリアム・アフトン\n\n基本情報\n心音24m、移動速度4.6m/s。FNAFより。探知不可と斧によるチェイスが強力なキラー。",
+    "youtubePlaylistId": "PLp1FBdXwpJDXXrp_MIIrnlRJiIfNvjPsl",
+    "montagePlaylistId": "PLp1FBdXwpJDUcbC-x8MDzaW0hEf2YXb98",
+    "specialists": []
+  },
+  {
+    "id": "krasue",
+    "displayName": "ガスー",
+    "imageName": "K41_TheKrasue_Portrait.webp",
+    "description": "本名：ブロン・スカパット\n\n基本情報\n心音32m、移動速度4.6m/s。タイの都市伝説より。高速移動と生首状態のチェイス力が強みのキラー。",
+    "youtubePlaylistId": "PLp1FBdXwpJDU0KXglZ8EQBVVa0gRA_9SZ",
+    "enjoyPlaylistId": "PLp1FBdXwpJDWK-y3M0VZOnahz0FnkaraO",
+    "specialists": []
+  },
+  {
+    "id": "first",
+    "displayName": "ファースト",
+    "imageName": "K42_TheFirst_Portrait.webp",
+    "description": "本名：不明\n\n基本情報\n\n心音32m、移動速度4.4m/s。",
+    "youtubePlaylistId": "PLp1FBdXwpJDU8r5dGnGNmwv1Xyf_Lj-Hx",
+    "enjoyPlaylistId": "PLp1FBdXwpJDUlmNne_i10LtvMaEt5HMVB",
+    "specialists": []
+  }
+]

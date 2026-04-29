@@ -1,0 +1,46 @@
+name: Auto Update YouTube Data
+
+on:
+  schedule:
+    # 毎日 日本時間の深夜3時 (UTCの18時) に自動実行
+    - cron: '0 18 * * *'
+  workflow_dispatch: # GitHubの画面から手動で実行できるようにする設定
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # リポジトリに書き込む（コミットする）権限を付与
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run YouTube update script
+        run: node scripts/update-youtube.js
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add src/data/killers.json src/data/updates.json
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update killer data from YouTube playlists" && git push)
+
+      - name: Install dependencies
+        run: npm ci || npm install
+
+      - name: Build the site
+        run: npm run build
+
+      - name: Deploy to gh-pages branch
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist

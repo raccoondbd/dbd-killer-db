@@ -1,0 +1,990 @@
+[
+  {
+    "id": "shikabutta",
+    "name": "シカブッタ",
+    "tags": [
+      "専門",
+      "トラッパー",
+      "配信"
+    ],
+    "avatarUrl": "https://yt3.googleusercontent.com/gTMYXuc-JoVN7d9nWF2JlUexQBd5zrmd5alAGF18jTtkmoklR0cVqri0MJRizXpRKxMNy1N-_A=s900-c-k-c0x00ffffff-no-rj",
+    "sns": {
+      "youtube": "https://www.youtube.com/@%E3%82%B7%E3%82%AB%E3%83%96%E3%83%83%E3%82%BF%E5%8A%87%E5%A0%B4"
+    }
+  },
+  {
+    "id": "syoudoubutu",
+    "name": "小動物",
+    "tags": [
+      "専門",
+      "トラッパー",
+      "配信"
+    ],
+    "avatarUrl": "https://yt3.googleusercontent.com/g3Fe2QHWLEgxfYpw1OBfcXfzvy5o2y88-KMuJkbp_PBqEwweuYQAveH4ZCaQzUqge28eT9e4ug=s900-c-k-c0x00ffffff-no-rj",
+    "sns": {
+      "youtube": "https://www.youtube.com/@syoudoubutu874"
+    }
+  },
+  {
+    "id": "excaliburasada",
+    "name": "エクスカリバーあさだ",
+    "tags": [
+      "専門",
+      "トラッパー",
+      "配信"
+    ],
+    "avatarUrl": "https://static-cdn.jtvnw.net/jtv_user_pictures/773b1406-e85b-4b5a-974c-6de6533a3809-profile_image-600x600.png",
+    "sns": {
+      "twitch": "https://www.twitch.tv/maou_asada"
+    }
+  },
+  {
+    "id": "unclestanbana",
+    "name": "UncleStanBana",
+    "tags": [
+      "専門",
+      "ヒルビリー",
+      "配信"
+    ],
+    "avatarUrl": "https://static-cdn.jtvnw.net/jtv_user_pictures/bb505a09-8ea4-46c2-88de-607c258cfbcc-profile_image-600x600.png",
+    "sns": {
+      "twitch": "https://www.twitch.tv/unclestanbana"
+    }
+  },
+  {
+    "id": "dwichaeljackson",
+    "name": "DwichaelJackson",
+    "tags": [
+      "専門",
+      "ヒルビリー",
+      "配信"
+    ],
+    "avatarUrl": "https://static-cdn.jtvnw.net/jtv_user_pictures/943a87c2-62e6-4459-8946-431d8d4e9927-profile_image-600x600.jpg",
+    "sns": {
+      "twitch": "https://www.twitch.tv/dwichaeljackson"
+    }
+  },
+  {
+    "id": "supaalf",
+    "name": "SupaAlf",
+    "tags": [
+      "専門",
+      "ナース",
+      "配信"
+    ],
+    "avatarUrl": "https://static-cdn.jtvnw.net/jtv_user_pictures/d1dc3069-c3a9-4cf8-b88d-99d1b47ac8f0-profile_image-600x600.png",
+    "sns": {
+      "twitch": "https://www.twitch.tv/supaalf"
+    }
+  },
+  {
+    "id": "tatakoma",
+    "name": "たたこま",
+    "tags": [
+      "専門",
+      "ナース",
+      "配信"
+    ],
+    "avatarUrl": "https://yt3.googleusercontent.com/EaY_E_jBhbYfSDoZV6iJeksS-rTcHyj19xsU2P7WQwHD6xi0z6xSVTRur2C2OuXjmc3pn0TfyQ=s900-c-k-c0x00ffffff-no-rj",
+    "sns": {
+      "youtube": "https://www.youtube.com/@%E3%81%9F%E3%81%9F%E3%81%93%E3%81%BE"
+    }
+  },
+  {
+    "id": "sk_ygaming",
+    "name": "sk_ygaming",
+    "tags": [
+      "専門",
+      "ナース",
+      "配信"
+    ],
+    "avatarUrl": "https://static-cdn.jtvnw.net/jtv_user_pictures/fcfdda39-8cd8-4b1d-acb6-a6100d5b7eb0-profile_image-600x600.png",
+    "sns": {
+      "twitch": "https://www.twitch.tv/sk_ygaming"
+    }
+  },
+  {
+    "id": "kingLion",
+    "name": "KINGらいおん",
+    "tags": [
+      "専門",
+      "ナース",
+      "配信"
+    ],
+    "avatarUrl": "https://yt3.googleusercontent.com/scsen8kX5UC62E1d8OfuyEE6Kvk8KFhFRWHjYtTxZqH9OapzJvlCl2Jag3MlMU_kqBocX3FrPTI=s900-c-k-c0x00ffffff-no-rj",
+    "sns": {
+      "youtube": "https://www.youtube.com/@KINGLionDao"
+    }
+  },
+  {
+    "id": "laculan",
+    "name": "Laculan",
+    "tags": [
+      "専門",
+      "ナース",
+      "配信"
+    ],
+    "avatarUrl": "https://static-cdn.jtvnw.net/jtv_user_pictures/af046f1e-6025-4147-bbd8-9d8a5352b839-profile_image-600x600.png",
+    "sns": {
+      "twitch": "https://www.twitch.tv/laculan"
+    }
+  },
+  {
+    "id": "one_stalky_boi",
+    "name": "One_stalky_boi",
+    "tags": [
+      "専門",
+      "シェイプ",
+      "配信"
+    ],
+    "avatarUrl": "https://static-cdn.jtvnw.net/jtv_user_pictures/11007bd5-1a0e-42e2-83d6-63cf8bbd9f24-profile_image-600x600.png",
+    "sns": {
+      "twitch": "https://www.twitch.tv/one_stalky_boi"
+    }
+  },
+  {
+    "id": "wao",
+    "name": "WAO",
+    "tags": [
+      "専門",
+      "ハグ",
+      "配信"
+    ],
+    "avatarUrl": "https://yt3.googleusercontent.com/ytc/AIdro_naRPmkyv4Lt6sLtMW5jm_9Ur_pxIgFSi_9J9E7a2LRzw=s900-c-k-c0x00ffffff-no-rj",
+    "sns": {
+      "youtube": "https://www.youtube.com/@wao3718"
+    }
+  },
+  {
+    "id": "skullandhope",
+    "name": "skullandhope",
+    "tags": [
+      "専門",
+      "ハグ",
+      "配信"
+    ],
+    "avatarUrl": "https://static-cdn.jtvnw.net/jtv_user_pictures/97b2b6a3-040d-48cb-8832-9e6abf8da365-profile_image-600x600.png",
+    "sns": {
+      "twitch": "https://www.twitch.tv/skullandhope"
+    }
+  },
+  {
+    "id": "tauruslehane",
+    "name": "tauruslehane",
+    "tags": [
+      "専門",
+      "ハグ",
+      "配信"
+    ],
+    "avatarUrl": "https://static-cdn.jtvnw.net/jtv_user_pictures/ab564c83-ac6c-47fa-8979-21900eec393e-profile_image-600x600.png",
+    "sns": {
+      "twitch": "https://www.twitch.tv/tauruslehane"
+    }
+  },
+  {
+    "id": "hermanthedoctor",
+    "name": "HermanTheDoctor",
+    "tags": [
+      "専門",
+      "ドクター",
+      "配信"
+    ],
+    "avatarUrl": "https://static-cdn.jtvnw.net/jtv_user_pictures/02754d9c-2b1a-4f90-83d2-1a1061dafb5a-profile_image-600x600.png",
+    "sns": {
+      "twitch": "https://www.twitch.tv/hermanthedoctor"
+    }
+  },
+  {
+    "id": "coconutrts",
+    "name": "CoconutRTS",
+    "tags": [
+      "専門",
+      "ハントレス",
+      "配信"
+    ],
+    "avatarUrl": "https://static-cdn.jtvnw.net/jtv_user_pictures/c23b4e44-c241-400b-9584-fcbd00f2b342-profile_image-600x600.png",
+    "sns": {
+      "twitch": "https://www.twitch.tv/coconutrts"
+    }
+  },
+  {
+    "id": "echan_huntress",
+    "name": "えーちゃん",
+    "tags": [
+      "専門",
+      "ハントレス",
+      "配信"
+    ],
+    "avatarUrl": "https://yt3.googleusercontent.com/o2I5av8WFcF4KW3YnmDxr-gU-o3UvPROtdZevHNRIyBPapGKFPN7p7RD9xnM4FvNrQQK4NtSCg=s160-c-k-c0x00ffffff-no-rj",
+    "sns": {
+      "youtube": "https://www.youtube.com/@%E3%81%88%E3%83%BC%E3%81%A1%E3%82%83%E3%82%93%E3%83%8F%E3%83%B3%E3%83%88%E3%83%AC%E3%82%B9%E5%B0%82"
+    }
+  },
+  {
+    "id": "ralph",
+    "name": "Ralph",
+    "tags": [
+      "専門",
+      "ハントレス",
+      "配信"
+    ],
+    "avatarUrl": "https://static-cdn.jtvnw.net/jtv_user_pictures/f86714b9-b5d9-4737-90e3-7e70d410d406-profile_image-600x600.png",
+    "sns": {
+      "twitch": "https://www.twitch.tv/ralph"
+    }
+  },
+  {
+    "id": "shoyuwo",
+    "name": "しょゆを",
+    "tags": [
+      "専門",
+      "ハントレス",
+      "配信"
+    ],
+    "avatarUrl": "https://static-cdn.jtvnw.net/jtv_user_pictures/1d4a42f3-6564-486c-a529-145de5598ddf-profile_image-600x600.png",
+    "sns": {
+      "twitch": "https://www.twitch.tv/shoyuwo"
+    }
+  },
+  {
+    "id": "fenrir_huntress",
+    "name": "ふぇんりる_ハントレス",
+    "tags": [
+      "専門",
+      "ハントレス",
+      "配信"
+    ],
+    "avatarUrl": "https://static-cdn.jtvnw.net/jtv_user_pictures/ce094234-e3b3-4d63-a7ca-9f993a424e91-profile_image-600x600.png",
+    "sns": {
+      "twitch": "https://www.twitch.tv/fenrir_huntress"
+    }
+  },
+  {
+    "id": "jisu",
+    "name": "じす",
+    "tags": [
+      "専門",
+      "ハントレス",
+      "配信"
+    ],
+    "avatarUrl": "https://yt3.googleusercontent.com/3W9MLAI9uddwIcGwGiPb6IECxhn6ZAjTHFAl2dvPDRRIk3cubz9CoWybT7O1mi0lXFNohNTYRHY=s900-c-k-c0x00ffffff-no-rj",
+    "sns": {
+      "youtube": "https://www.youtube.com/@Jisu_YouTube"
+    }
+  },
+  {
+    "id": "kimucha",
+    "name": "きむちゃ",
+    "tags": [
+      "専門",
+      "ハントレス",
+      "配信"
+    ],
+    "avatarUrl": "https://yt3.googleusercontent.com/irpUr283wDwWj5Tjve-6MyajjOwqT9TUUVBKn-vMHH1FjEBqV-P2lPpJBAljYwSA8cT1SDE__g=s160-c-k-c0x00ffffff-no-rj",
+    "sns": {
+      "youtube": "https://www.youtube.com/@Kimucha___"
+    }
+  },
+  {
+    "id": "kurosuto",
+    "name": "くろすと",
+    "tags": [
+      "専門",
+      "カニバル",
+      "配信"
+    ],
+    "avatarUrl": "https://yt3.googleusercontent.com/MvoHfmEfWLASiS-1TmEyhIfFpZeS8ZhAhJpTCOMahl6GnN6Y1tk70aLFQ9IRhBJWz_xXdjc-n5E=s900-c-k-c0x00ffffff-no-rj",
+    "sns": {
+      "youtube": "https://www.youtube.com/@%E3%81%8F%E3%82%8D%E3%81%99%E3%81%A8dbd"
+    }
+  },
+  {
+    "id": "epidemy",
+    "name": "Epidemy",
+    "tags": [
+      "専門",
+      "カニバル",
+      "配信"
+    ],
+    "avatarUrl": "https://static-cdn.jtvnw.net/jtv_user_pictures/07f4d8b4-4db5-4b04-8f3e-b464ea73079e-profile_image-600x600.png",
+    "sns": {
+      "twitch": "https://www.twitch.tv/epidemy"
+    }
+  },
+  {
+    "id": "interista",
+    "name": "Interista",
+    "tags": [
+      "専門",
+      "カニバル",
+      "配信"
+    ],
+    "avatarUrl": "https://static-cdn.jtvnw.net/jtv_user_pictures/9fb0641f-77a7-47bb-909f-844f4bed43f9-profile_image-600x600.jpeg",
+    "sns": {
+      "twitch": "https://www.twitch.tv/interista1523"
+    }
+  },
+  {
+    "id": "weslv",
+    "name": "WesLv",
+    "tags": [
+      "専門",
+      "ナイトメア",
+      "配信"
+    ],
+    "avatarUrl": "https://static-cdn.jtvnw.net/jtv_user_pictures/5d4aaa6a-9837-45f0-b07d-ed4155345c10-profile_image-600x600.png",
+    "sns": {
+      "twitch": "https://www.twitch.tv/weslv"
+    }
+  },
+  {
+    "id": "drussnbubba",
+    "name": "DrussnBubba",
+    "tags": [
+      "専門",
+      "ピッグ",
+      "配信"
+    ],
+    "avatarUrl": "https://static-cdn.jtvnw.net/jtv_user_pictures/bbce38dc-4c4b-4e71-bf65-5645f7378dd4-profile_image-600x600.png",
+    "sns": {
+      "twitch": "https://www.twitch.tv/drussnbubba"
+    }
+  },
+  {
+    "id": "remylea",
+    "name": "Remylea",
+    "tags": [
+      "専門",
+      "スピリット",
+      "配信"
+    ],
+    "avatarUrl": "https://static-cdn.jtvnw.net/jtv_user_pictures/c4a93afc-c30d-417b-9641-f92bfd508a01-profile_image-600x600.png",
+    "sns": {
+      "twitch": "https://www.twitch.tv/Remylea"
+    }
+  },
+  {
+    "id": "ghostbuster_tanaka",
+    "name": "ゴーストバスター田中",
+    "tags": [
+      "専門",
+      "スピリット",
+      "配信"
+    ],
+    "avatarUrl": "https://yt3.googleusercontent.com/gPrpp3vzOA_vVZQVH10-g5FM4twqw1KTGNI4S7I4fKppIPqywzR_m7DoM-Z2v5Vc9nZ34AtN_w=s900-c-k-c0x00ffffff-no-rj",
+    "sns": {
+      "youtube": "https://www.youtube.com/@%E3%82%B4%E3%83%BC%E3%82%B9%E3%83%88%E3%83%90%E3%82%B9%E3%82%BF%E3%83%BC%E7%94%B0%E4%B8%AD"
+    }
+  },
+  {
+    "id": "higarin",
+    "name": "ひがりん",
+    "tags": [
+      "専門",
+      "スピリット",
+      "配信"
+    ],
+    "avatarUrl": "https://yt3.googleusercontent.com/2LQzmKty9uVsVQZtyEi1-H3fd4_xb5-6gJmebMifw-fOF5JWBAYS2WzW9BnriMs9J6av-va51U0=s900-c-k-c0x00ffffff-no-rj",
+    "sns": {
+      "youtube": "https://www.youtube.com/@%E3%81%B2%E3%81%8C%E3%82%8A%E3%82%93-s2i"
+    }
+  },
+  {
+    "id": "tatariu",
+    "name": "Tatariu",
+    "tags": [
+      "専門",
+      "リージョン",
+      "配信"
+    ],
+    "avatarUrl": "https://static-cdn.jtvnw.net/jtv_user_pictures/d7fe47fb-806e-4405-bd27-561e90871f90-profile_image-600x600.png",
+    "sns": {
+      "twitch": "https://www.twitch.tv/Tatariu"
+    }
+  },
+  {
+    "id": "magi_n7",
+    "name": "Magi_n7",
+    "tags": [
+      "専門",
+      "プレイグ",
+      "配信"
+    ],
+    "avatarUrl": "https://static-cdn.jtvnw.net/jtv_user_pictures/bdca0004-d5a2-478b-9f18-e33e0d4e0ae4-profile_image-600x600.png",
+    "sns": {
+      "twitch": "https://www.twitch.tv/magi_n7"
+    }
+  },
+  {
+    "id": "nonpori",
+    "name": "のんぽり",
+    "tags": [
+      "専門",
+      "ゴーストフェイス",
+      "配信"
+    ],
+    "avatarUrl": "https://yt3.googleusercontent.com/ytc/AIdro_k4C7QOExTaFUiS293gLJexqytvETBiB_5DkN8DqUvEQMg=s900-c-k-c0x00ffffff-no-rj",
+    "sns": {
+      "youtube": "https://www.youtube.com/@%E3%81%AE%E3%82%93%E3%81%BD%E3%82%8A"
+    }
+  },
+  {
+    "id": "stalked",
+    "name": "Stalked",
+    "tags": [
+      "専門",
+      "ゴーストフェイス",
+      "配信"
+    ],
+    "avatarUrl": "https://static-cdn.jtvnw.net/jtv_user_pictures/9ef45273-dbeb-4bd2-a46d-b2c7ca6c240d-profile_image-600x600.png",
+    "sns": {
+      "twitch": "https://www.twitch.tv/stalkedd"
+    }
+  },
+  {
+    "id": "fundoshi_ghostface",
+    "name": "氾濫するふんどし",
+    "tags": [
+      "専門",
+      "ゴーストフェイス",
+      "配信"
+    ],
+    "avatarUrl": "https://yt3.googleusercontent.com/gyHqtZ9y0zAboTSRZYd8kodTeRYcYjpbc7K8cTgeyYYs1xXM_zS2xwjoo6nqH0TDNdMQTVo=s900-c-k-c0x00ffffff-no-rj",
+    "sns": {
+      "youtube": "https://www.youtube.com/@%E3%81%B5%E3%82%93%E3%81%A9%E3%81%97_GhostFace"
+    }
+  },
+  {
+    "id": "kiborihigu_sake",
+    "name": "木彫熊の鮭の方",
+    "tags": [
+      "専門",
+      "デススリンガー",
+      "配信"
+    ],
+    "avatarUrl": "https://yt3.googleusercontent.com/ymHnIo4bt64fVNguaAo1G-l8ot1u1QZ0oRoWlg8gBMSaI1nNaIzLWx9YhUsgglZxoZxDvjFZ=s900-c-k-c0x00ffffff-no-rj",
+    "sns": {
+      "youtube": "https://www.youtube.com/@shake_no_hou"
+    }
+  },
+  {
+    "id": "zapples",
+    "name": "Zapples",
+    "tags": [
+      "専門",
+      "デススリンガー",
+      "配信"
+    ],
+    "avatarUrl": "https://static-cdn.jtvnw.net/jtv_user_pictures/d6bac8eb-c172-4daf-b88f-eba059e0247d-profile_image-600x600.png",
+    "sns": {
+      "twitch": "https://www.twitch.tv/zzzapples"
+    }
+  },
+  {
+    "id": "slaga",
+    "name": "すらが",
+    "tags": [
+      "専門",
+      "エクセキューショナー",
+      "配信"
+    ],
+    "avatarUrl": "https://static-cdn.jtvnw.net/jtv_user_pictures/9e6db899-bc08-43fe-b6ba-9c320c348c29-profile_image-600x600.png",
+    "sns": {
+      "twitch": "https://m.twitch.tv/slaga0720"
+    }
+  },
+  {
+    "id": "awrii",
+    "name": "Awrii",
+    "tags": [
+      "専門",
+      "エクセキューショナー",
+      "配信"
+    ],
+    "avatarUrl": "https://static-cdn.jtvnw.net/jtv_user_pictures/379d6026-9564-4c08-b65b-43397f306660-profile_image-600x600.png",
+    "sns": {
+      "twitch": "https://www.twitch.tv/Awrii"
+    }
+  },
+  {
+    "id": "toki_sankaku",
+    "name": "とき△",
+    "tags": [
+      "専門",
+      "エクセキューショナー",
+      "配信"
+    ],
+    "avatarUrl": "https://yt3.googleusercontent.com/3HT1j941Wmybd2Gzc4o1RX7eTUvHuT_kQwGfl3WmBU3EyXx3a84Rhqw7LgqCW8wMfvPaO4B7JQ=s900-c-k-c0x00ffffff-no-rj",
+    "sns": {
+      "youtube": "https://www.youtube.com/@%E3%81%A8%E3%81%8D%E3%81%95%E3%82%93%E3%81%8B%E3%81%8F"
+    }
+  },
+  {
+    "id": "gama_fugu",
+    "name": "ガマふぐ仙人",
+    "tags": [
+      "専門",
+      "エクセキューショナー",
+      "配信"
+    ],
+    "avatarUrl": "https://static-cdn.jtvnw.net/jtv_user_pictures/ae689d53-4c64-42d9-8e6a-0795cacd4077-profile_image-600x600.png",
+    "sns": {
+      "twitch": "https://www.twitch.tv/gama_fugu"
+    }
+  },
+  {
+    "id": "lilithomen",
+    "name": "LilithOmen",
+    "tags": [
+      "専門",
+      "ブライト",
+      "配信"
+    ],
+    "avatarUrl": "https://yt3.googleusercontent.com/eQ4-H92S1FSY7XatUR84sx0r5xDOX28ZhFoxLNh1xqa-rp1zH8U0g_eI9yaz_gj7C3S2nLhFrb0=s900-c-k-c0x00ffffff-no-rj",
+    "sns": {
+      "youtube": "https://www.youtube.com/@LilithOmen"
+    }
+  },
+  {
+    "id": "momoseventh",
+    "name": "Momoseventh",
+    "tags": [
+      "専門",
+      "ブライト",
+      "配信"
+    ],
+    "avatarUrl": "https://static-cdn.jtvnw.net/jtv_user_pictures/93fadfd1-06aa-44fb-8aad-3f4c94290fdb-profile_image-600x600.png",
+    "sns": {
+      "twitch": "https://www.twitch.tv/momoseventh"
+    }
+  },
+  {
+    "id": "tamu",
+    "name": "たむ",
+    "tags": [
+      "専門",
+      "ブライト",
+      "配信"
+    ],
+    "avatarUrl": "https://yt3.googleusercontent.com/nak9Ivx1UCVHn2wzsBoiTwl8qEV6lHUDblYhyIcgk5GDNN8wpYxaiyuI8q6nEfFgZFhxl2Cm=s900-c-k-c0x00ffffff-no-rj",
+    "sns": {
+      "youtube": "https://www.youtube.com/@tam_3"
+    }
+  },
+  {
+    "id": "pioka",
+    "name": "ぴーおか",
+    "tags": [
+      "専門",
+      "ブライト",
+      "配信"
+    ],
+    "avatarUrl": "https://yt3.googleusercontent.com/gX0cMNgD63Q_TfiE6uwigIjFPBc0IL66IifpX70EEz8KTLPLGtgPSzUQQYzsgYdq5FPdBk39n-g=s900-c-k-c0x00ffffff-no-rj",
+    "sns": {
+      "youtube": "https://www.youtube.com/@poka111games"
+    }
+  },
+  {
+    "id": "itoko0607",
+    "name": "イトコ0607",
+    "tags": [
+      "専門",
+      "ブライト",
+      "配信"
+    ],
+    "avatarUrl": "https://yt3.googleusercontent.com/T7_D5ici_yOVWwdXJJleQiEBpN6jaI917BgUHXxUQVW56Hn-ScH-_zFvZaGQo1Deb1dLn639mA=s900-c-k-c0x00ffffff-no-rj",
+    "sns": {
+      "youtube": "https://www.youtube.com/@%E3%82%A4%E3%83%88%E3%82%B30607"
+    }
+  },
+  {
+    "id": "ex",
+    "name": "EX",
+    "tags": [
+      "専門",
+      "ブライト",
+      "配信"
+    ],
+    "avatarUrl": "https://yt3.googleusercontent.com/pnKSy9A5oYNX7U736uXU-qIvPWr0HF70LuvPLC_j7bLXvUDpd2cFzEMKDUzqgOFcA9dP5oCKwA=s900-c-k-c0x00ffffff-no-rj",
+    "sns": {
+      "youtube": "https://www.youtube.com/@ex772"
+    }
+  },
+  {
+    "id": "wara",
+    "name": "わら",
+    "tags": [
+      "専門",
+      "ブライト",
+      "配信"
+    ],
+    "avatarUrl": "https://yt3.googleusercontent.com/MLaveCkSfeF0e6Z_3CysipYs9ijEiPyltQuKHfmsl6mfgLfxIOc-QHjGWfJ1Q7aM7I8PRMiY=s900-c-k-c0x00ffffff-no-rj",
+    "sns": {
+      "youtube": "https://www.youtube.com/@%E3%82%8F%E3%82%89-y6b"
+    }
+  },
+  {
+    "id": "ayano_hm",
+    "name": "Ayano_hm",
+    "tags": [
+      "専門",
+      "トリックスター",
+      "配信"
+    ],
+    "avatarUrl": "https://static-cdn.jtvnw.net/jtv_user_pictures/d23b4c97-725c-483d-b6b1-ab7176cf2cd3-profile_image-600x600.png",
+    "sns": {
+      "twitch": "https://www.twitch.tv/ayano_hm"
+    }
+  },
+  {
+    "id": "knifyyy36",
+    "name": "Knifyyy36",
+    "tags": [
+      "専門",
+      "トリックスター",
+      "配信"
+    ],
+    "avatarUrl": "https://static-cdn.jtvnw.net/jtv_user_pictures/d08bd773-da76-417c-b224-c77aaf4febd8-profile_image-600x600.png",
+    "sns": {
+      "twitch": "https://www.twitch.tv/knifyyy36"
+    }
+  },
+  {
+    "id": "tafie",
+    "name": "Tafie",
+    "tags": [
+      "専門",
+      "トリックスター",
+      "配信"
+    ],
+    "avatarUrl": "https://static-cdn.jtvnw.net/jtv_user_pictures/20da3144-9c41-45b3-9405-66af5125e756-profile_image-600x600.png",
+    "sns": {
+      "twitch": "https://www.twitch.tv/tafie"
+    }
+  },
+  {
+    "id": "wacek134",
+    "name": "Wacek134",
+    "tags": [
+      "専門",
+      "トリックスター",
+      "配信"
+    ],
+    "avatarUrl": "https://static-cdn.jtvnw.net/jtv_user_pictures/ba9b84ab-3f09-461e-9af5-2cd52337ba3d-profile_image-600x600.jpeg",
+    "sns": {
+      "twitch": "https://www.twitch.tv/wacek134"
+    }
+  },
+  {
+    "id": "revvium",
+    "name": "Revvium",
+    "tags": [
+      "専門",
+      "トリックスター",
+      "配信"
+    ],
+    "avatarUrl": "https://static-cdn.jtvnw.net/jtv_user_pictures/f29e8198-af13-4525-bce6-da677eb7251d-profile_image-600x600.png",
+    "sns": {
+      "twitch": "https://www.twitch.tv/revvium"
+    }
+  },
+  {
+    "id": "araumi",
+    "name": "荒海",
+    "tags": [
+      "専門",
+      "ネメシス",
+      "配信"
+    ],
+    "avatarUrl": "https://yt3.googleusercontent.com/iZ0DvXdv5OQFYcBRgxJsZuz_UmDsOYUvcakj6Q-mLHdo1glfM-3ZSrrN6MXyD_fC4OrPd4a-cg=s900-c-k-c0x00ffffff-no-rj",
+    "sns": {
+      "youtube": "https://www.youtube.com/@araumi56"
+    }
+  },
+  {
+    "id": "hoshiyomiray",
+    "name": "星詠れい",
+    "tags": [
+      "専門",
+      "アーティスト",
+      "配信"
+    ],
+    "avatarUrl": "https://static-cdn.jtvnw.net/jtv_user_pictures/d8a6112c-fae1-4a35-83f3-0b4370f08d86-profile_image-600x600.png",
+    "sns": {
+      "twitch": "https://www.twitch.tv/hoshiyomiray"
+    }
+  },
+  {
+    "id": "uma",
+    "name": "UMA",
+    "tags": [
+      "専門",
+      "怨霊",
+      "配信"
+    ],
+    "avatarUrl": "https://yt3.googleusercontent.com/8MQK86cRPGtGrxf-dtAOMCXOJRb5PruR3nspdeuaqueTvX-7rLivUaUVq03KgjV869Vqm_qfkA=s900-c-k-c0x00ffffff-no-rj",
+    "sns": {
+      "youtube": "https://www.youtube.com/@UMA-y3m"
+    }
+  },
+  {
+    "id": "uzume",
+    "name": "うずめ",
+    "tags": [
+      "専門",
+      "怨霊",
+      "配信"
+    ],
+    "avatarUrl": "https://yt3.googleusercontent.com/hCg-Tx1Bo77p1o4s6KQ2cYcVMOcpDOh-5VTWrTOkJ8Z39KUedjLVOoh-JqMp7BLSzgSCZ2NxBg=s900-c-k-c0x00ffffff-no-rj",
+    "sns": {
+      "youtube": "https://www.youtube.com/@%E3%81%86%E3%81%9A%E3%82%81"
+    }
+  },
+  {
+    "id": "kmd",
+    "name": "KMD",
+    "tags": [
+      "専門",
+      "ドレッジ",
+      "配信"
+    ],
+    "avatarUrl": "https://static-cdn.jtvnw.net/jtv_user_pictures/8f2bc6b9-988c-4c99-b740-cf7f43ab06e7-profile_image-600x600.jpeg",
+    "sns": {
+      "twitch": "https://www.twitch.tv/itzkmd"
+    }
+  },
+  {
+    "id": "agusecannon",
+    "name": "AguseCannon",
+    "tags": [
+      "専門",
+      "ドレッジ",
+      "配信"
+    ],
+    "avatarUrl": "https://static-cdn.jtvnw.net/jtv_user_pictures/c4bdf134-04c9-404e-8475-af4eea5d035d-profile_image-600x600.png",
+    "sns": {
+      "twitch": "https://www.twitch.tv/agusecannon"
+    }
+  },
+  {
+    "id": "yuchor1",
+    "name": "ゆうちょり",
+    "tags": [
+      "専門",
+      "ウェスカー",
+      "配信"
+    ],
+    "avatarUrl": "https://yt3.googleusercontent.com/cKGH6xf_qfJk2ysIDfnQacmtU-pXQfmLNH8Tdvo8BqKa3RsJxf1ZSEXRTgMiSZ0NF69wX171=s900-c-k-c0x00ffffff-no-rj",
+    "sns": {
+      "youtube": "https://www.youtube.com/@Yuchor1"
+    }
+  },
+  {
+    "id": "alran",
+    "name": "alran",
+    "tags": [
+      "専門",
+      "ウェスカー",
+      "配信"
+    ],
+    "avatarUrl": "https://static-cdn.jtvnw.net/jtv_user_pictures/e3257dfb-5d06-4bad-8b79-f8e47619a776-profile_image-600x600.png",
+    "sns": {
+      "twitch": "https://www.twitch.tv/alran"
+    }
+  },
+  {
+    "id": "firstdbd",
+    "name": "FirstDBD",
+    "tags": [
+      "専門",
+      "ウェスカー",
+      "配信"
+    ],
+    "avatarUrl": "https://static-cdn.jtvnw.net/jtv_user_pictures/45f876ea-0118-4b2b-8b85-acc984f0f5b1-profile_image-600x600.png",
+    "sns": {
+      "twitch": "https://www.twitch.tv/firstdbd"
+    }
+  },
+  {
+    "id": "rei",
+    "name": "REI",
+    "tags": [
+      "専門",
+      "ナイト",
+      "配信"
+    ],
+    "avatarUrl": "https://yt3.googleusercontent.com/6PbR6PvjIo6y6ok2CKd-k5UsahyWNKjf-iwpvQTUp-Wg7WmD8D0bwp-qOmHlJ__JRvXiSFErZQ=s900-c-k-c0x00ffffff-no-rj",
+    "sns": {
+      "youtube": "https://www.youtube.com/@REI-jt3tj"
+    }
+  },
+  {
+    "id": "zmpixie",
+    "name": "zmpixie",
+    "tags": [
+      "専門",
+      "ナイト",
+      "配信"
+    ],
+    "avatarUrl": "https://static-cdn.jtvnw.net/jtv_user_pictures/5b63e1ae-2009-4a89-a41f-2bc6ccc249a2-profile_image-600x600.png",
+    "sns": {
+      "twitch": "https://www.twitch.tv/zmpixie"
+    }
+  },
+  {
+    "id": "timoshi4",
+    "name": "チモシー",
+    "tags": [
+      "専門",
+      "シンギュラリティ",
+      "配信"
+    ],
+    "avatarUrl": "https://static-cdn.jtvnw.net/jtv_user_pictures/953f064a-e4fe-4adc-89e2-032be5725248-profile_image-600x600.png",
+    "sns": {
+      "twitch": "https://www.twitch.tv/timoshi4"
+    }
+  },
+  {
+    "id": "themrheadache",
+    "name": "theMrHeadache",
+    "tags": [
+      "専門",
+      "ゼノモーフ",
+      "配信"
+    ],
+    "avatarUrl": "https://static-cdn.jtvnw.net/jtv_user_pictures/d6912b78-088f-4619-aad8-4b42b2339e2e-profile_image-600x600.png",
+    "sns": {
+      "twitch": "https://www.twitch.tv/themrheadache"
+    }
+  },
+  {
+    "id": "cinthean",
+    "name": "Cinthean",
+    "tags": [
+      "専門",
+      "ゼノモーフ",
+      "配信"
+    ],
+    "avatarUrl": "https://static-cdn.jtvnw.net/jtv_user_pictures/51480b00-f3bb-40cb-b65f-e7339faa786d-profile_image-600x600.png",
+    "sns": {
+      "twitch": "https://www.twitch.tv/cinthean"
+    }
+  },
+  {
+    "id": "guys_power",
+    "name": "ぱわー",
+    "tags": [
+      "専門",
+      "グッドガイ",
+      "配信"
+    ],
+    "avatarUrl": "https://yt3.googleusercontent.com/PLJ2TRJVop9c_PhSMHtPO-F3ii60TLVfCwf9_Pr93JUa6jXFxH59Y44CnN1nP5sxUiZIjeWMTg=s900-c-k-c0x00ffffff-no-rj",
+    "sns": {
+      "youtube": "https://www.youtube.com/@Guys_Power"
+    }
+  },
+  {
+    "id": "mogemogetaro",
+    "name": "もげ太郎",
+    "tags": [
+      "専門",
+      "グッドガイ",
+      "配信"
+    ],
+    "avatarUrl": "https://yt3.googleusercontent.com/seNC-PHd_6oNXrdeAJ-IL94Z8f0vdDiGFZLk1HBPHV6SjjTZAAnZkP0M_MlZjuLCKk-AMPv-Gg=s900-c-k-c0x00ffffff-no-rj",
+    "sns": {
+      "youtube": "https://www.youtube.com/@mogemogetaro"
+    }
+  },
+  {
+    "id": "wispfell",
+    "name": "Wispfell",
+    "tags": [
+      "専門",
+      "アンノウン",
+      "配信"
+    ],
+    "avatarUrl": "https://static-cdn.jtvnw.net/jtv_user_pictures/57e6b5bc-eebb-4159-bf68-3588cc94de64-profile_image-600x600.png",
+    "sns": {
+      "twitch": "https://www.twitch.tv/wispfell"
+    }
+  },
+  {
+    "id": "hiro_un",
+    "name": "ひろ",
+    "tags": [
+      "専門",
+      "アンノウン",
+      "配信"
+    ],
+    "avatarUrl": "https://yt3.googleusercontent.com/p14SS2_mu5GzO3X2hVjCcgH6PptYzO6_cX4YYJuuaN512n-FFiBqEP0mQP4TieVECM-t0GeqqrY=s900-c-k-c0x00ffffff-no-rj",
+    "sns": {
+      "youtube": "https://www.youtube.com/@%E3%81%B2%E3%82%8Dun"
+    }
+  },
+  {
+    "id": "refined",
+    "name": "Refined",
+    "tags": [
+      "専門",
+      "リッチ",
+      "配信"
+    ],
+    "avatarUrl": "https://static-cdn.jtvnw.net/jtv_user_pictures/0a1bd91a-ef8e-4c30-978d-a9b44178e0ac-profile_image-600x600.png",
+    "sns": {
+      "twitch": "https://www.twitch.tv/refined"
+    }
+  },
+  {
+    "id": "tbone_dbd",
+    "name": "Tボーン大佐",
+    "tags": [
+      "専門",
+      "ハウンドマスター",
+      "配信"
+    ],
+    "avatarUrl": "https://yt3.googleusercontent.com/QTV63x9gLBU-FtBihPk0Yg1RKjnoc-0R4OOw3mJROrydJQLTviG3_0pS8CM6xCU-iFNVQD_P=s900-c-k-c0x00ffffff-no-rj",
+    "sns": {
+      "youtube": "https://www.youtube.com/@Tbone_dbd"
+    }
+  },
+  {
+    "id": "f1ction",
+    "name": "F1ction",
+    "tags": [
+      "専門",
+      "グール",
+      "配信"
+    ],
+    "avatarUrl": "https://static-cdn.jtvnw.net/jtv_user_pictures/0ab46b9e-d570-4fcf-92b9-fb109d13edbf-profile_image-600x600.png",
+    "sns": {
+      "twitch": "https://www.twitch.tv/f1ctionisntreal"
+    }
+  },
+  {
+    "id": "asuno",
+    "name": "Asuno",
+    "tags": [
+      "専門",
+      "グール",
+      "配信"
+    ],
+    "avatarUrl": "https://static-cdn.jtvnw.net/jtv_user_pictures/44b93e29-ed76-4b8e-aeae-ae18bf58c86b-profile_image-600x600.png",
+    "sns": {
+      "twitch": "https://www.twitch.tv/asuno"
+    }
+  },
+  {
+    "id": "yuruyuruko",
+    "name": "ゆるゆるにこ",
+    "tags": [
+      "専門",
+      "グール",
+      "配信"
+    ],
+    "avatarUrl": "https://yt3.googleusercontent.com/svPJrcjE8wNNdabLGlLPoGH28m68LFzWur80AnXLh0BDSCddW1QPuN2F8CeHyfMm28rZz9O8YA=s900-c-k-c0x00ffffff-no-rj",
+    "sns": {
+      "youtube": "https://www.youtube.com/@%E3%82%86%E3%82%8B%E3%82%86%E3%82%8B%E3%81%AB%E3%81%93"
+    }
+  }
+]
