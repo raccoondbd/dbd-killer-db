@@ -1,0 +1,122 @@
+.useful-sites-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--color-surface);
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+}
+
+.page-header p {
+    color: var(--color-text-dim);
+    font-size: 1.1rem;
+}
+
+.back-link-container {
+    margin-bottom: 2rem;
+}
+
+.back-link-container.bottom {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.back-link {
+    display: inline-block;
+    color: var(--color-text-dim);
+    text-decoration: none;
+    transition: color 0.2s;
+    font-weight: bold;
+}
+
+.back-link:hover {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+.sites-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.site-card {
+    background-color: var(--color-surface);
+    border-radius: 8px;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+    border: 1px solid transparent;
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.site-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    border-color: #333;
+    text-decoration: none;
+}
+
+.site-info {
+    flex: 1;
+    padding-right: 1.5rem;
+}
+
+.site-title {
+    font-size: 1.4rem;
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.site-description {
+    color: var(--color-text-dim);
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+.site-link-icon {
+    font-size: 1.5rem;
+    opacity: 0.5;
+    transition: opacity 0.2s, transform 0.2s;
+}
+
+.site-card:hover .site-link-icon {
+    opacity: 1;
+    transform: translateX(4px);
+}
+
+@media (max-width: 600px) {
+    .useful-sites-page {
+        padding: 1rem;
+    }
+    
+    .page-header h1 {
+        font-size: 2rem;
+    }
+    
+    .site-card {
+        padding: 1.2rem;
+    }
+    
+    .site-title {
+        font-size: 1.2rem;
+    }
+}

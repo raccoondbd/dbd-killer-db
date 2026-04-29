@@ -178,7 +178,15 @@
 
     .common-guides {
         flex-direction: column;
-        align-items: center;
+        align-items: stretch; /* ボタンの幅を全て同じにする */
+        gap: 0.8rem; /* 少し間隔を狭める */
+        padding: 0 1rem; /* 画面端にくっつかないように余裕を持たせる */
+    }
+
+    .guide-button {
+        padding: 0.8rem 1rem; /* 全体的にボタンを少し小さく */
+        text-align: center;
+        font-size: 0.95rem; /* 文字も少し小さく */
     }
 
     .killer-grid {
@@ -188,13 +196,21 @@
 
     .update-info-section {
         padding: 1rem;
-        margin-top: 2rem;
+        margin-top: 1.5rem;
+    }
+
+    .update-info-section h2 {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+        padding-bottom: 0.3rem;
     }
 
     .update-list li {
         flex-direction: column;
-        gap: 0.3rem;
+        gap: 0.1rem; /* 日付と内容の隙間を狭める */
         align-items: flex-start;
+        padding: 0.5rem 0; /* リスト間の余白を狭める */
+        font-size: 0.9rem; /* 文字を少し小さく */
     }
 }
 

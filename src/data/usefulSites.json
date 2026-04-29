@@ -1,0 +1,26 @@
+[
+  {
+    "id": "otzdarva",
+    "title": "Otzdarva.com",
+    "url": "https://otzdarva.com/",
+    "description": "海外の超有名プレイヤーOtzdarva氏のサイト。全キラーのおすすめ構成（ビルド）やアドオンのティアリストなどが網羅されており非常に参考になります。"
+  },
+  {
+    "id": "nightlight",
+    "title": "NightLight",
+    "url": "https://nightlight.gg/",
+    "description": "プレイヤーの統計データを集計している海外サイト。現在のキラー使用率、人気パークのランキングなどを確認できます。"
+  },
+  {
+    "id": "kamigame",
+    "title": "神ゲー攻略 (DbD)",
+    "url": "https://kamigame.jp/dbd/index.html",
+    "description": "国内最大級のDbD攻略サイト。最新のアップデート情報やイベント、シュライン・オブ・シークレットの更新内容をいち早く確認するのに便利です。"
+  },
+  {
+    "id": "wiki-gg",
+    "title": "Dead by Daylight Wiki (wiki.gg)",
+    "url": "https://deadbydaylight.wiki.gg/",
+    "description": "最も情報量が多いデータベース（英語）。キラーの移動速度、能力の細かい仕様や判定、過去のパッチノートなど、正確なデータを知りたい時に役立ちます。"
+  }
+]
