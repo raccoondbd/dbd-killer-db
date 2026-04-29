@@ -4,12 +4,12 @@
     "displayName": "トラッパー",
     "imageName": "K01_TheTrapper_Portrait.webp",
     "description": "本名：エヴァン・マクミラン\n\n基本情報\n心音32m、移動速度4.6m/s。\nトラバサミを設置して生存者を拘束する能力を持つ。試合開始時に2個のトラバサミを所持しており、マップ上には解除されたトラバサミが8個出現する。トラバサミのオーラは常に視認できる。\n\nトラバサミ\n近くにあるトラバサミの上でインタラクトすると回収できる。所持できるトラバサミは最大2個。能力ボタンを長押しするとトラバサミを設置でき、設置時間は2.5秒。このうち1秒はしゃがんでから立ち上がるモーションに使われるため、設置時間短縮系アドオンの効果が適用されるのは実質1.5秒分のみ。設置すると5秒間移動速度が7.5%上昇する。\n\n設置されたトラバサミ\n作動状態のトラバサミを踏んだ生存者は拘束され、その場から動けなくなる。健康状態の生存者は負傷状態になる。拘束された生存者は自力で脱出を試みるか、他の生存者に助けてもらうことで解除できる。脱出試行時間は1.8秒で、成功確率は16.67%。最大6回の試行後は必ず脱出に成功する。\n\n立ち回り\n守りたい発電機をあらかじめ決め、その周辺、特にトラッパーが接近した際に生存者が逃げ込みやすい場所に罠を設置する。\n基本は発電機の巡回を軸に立ち回る。\n罠にかかった生存者は、守っている発電機側の最奥のフックに吊るし、\nその救助ルートや逃走ルートに罠を仕掛けてダブルアップを狙う。\n最低でも救助交換を狙い、ダブルアップの試行回数を増やしていくことが重要。\n\nTIPS・コツ\n板や窓の前に罠を仕掛けるだけでなく、生存者が通りやすいルートに罠を設置することで、チェイスしていない生存者にも常にプレッシャーを与えることができる。\n特に救助ルートに罠を置くことで、状況次第では生存者を一気に壊滅状態へ追い込むことも可能。\n\n強力なアドオン\n・罠にかかった生存者を攻撃せずとも瀕死状態にできる「砥石」\n・罠が自動で開くようになる「玉虫色の砥石」",
-    "youtubePlaylistId": "PLp1FBdXwpJDWIIuMvqW_0dnE8VSFY4jdq&pp=gAQB",
-    "enjoyPlaylistId": "PLp1FBdXwpJDW0joZ8w48pAopo72RjiXgI&pp=gAQB",
+    "youtubePlaylistId": "PLp1FBdXwpJDWIIuMvqW_0dnE8VSFY4jdq",
+    "enjoyPlaylistId": "PLp1FBdXwpJDW0joZ8w48pAopo72RjiXgI",
     "specialists": [
       {
         "name": "シカブッタ",
-        "url": "https://www.youtube.com/@%E3%82%B7%E3%82%AB%E3%83%96%E3%83%83%E3%82%BF%E5%8A%87%E5%A0%B4"
+        "url": "https://www.youtube.com/@シカブッタ劇場"
       },
       {
         "name": "小動物",
@@ -62,7 +62,7 @@
       },
       {
         "name": "たたこま",
-        "url": "https://www.youtube.com/@%E3%81%9F%E3%81%9F%E3%81%93%E3%81%BE"
+        "url": "https://www.youtube.com/@たたこま"
       },
       {
         "name": "sk_ygaming",
@@ -143,7 +143,7 @@
       },
       {
         "name": "えーちゃん",
-        "url": "https://www.youtube.com/@%E3%81%88%E3%83%BC%E3%81%A1%E3%82%83%E3%82%93%E3%83%8F%E3%83%B3%E3%83%88%E3%83%AC%E3%82%B9%E5%B0%82"
+        "url": "https://www.youtube.com/@えーちゃんハントレス専"
       },
       {
         "name": "Ralph",
@@ -177,7 +177,7 @@
     "specialists": [
       {
         "name": "くろすと",
-        "url": "https://www.youtube.com/@%E3%81%8F%E3%82%8D%E3%81%99%E3%81%A8dbd"
+        "url": "https://www.youtube.com/@くろすとdbd"
       },
       {
         "name": "Epidemy",
@@ -244,11 +244,11 @@
       },
       {
         "name": "ゴーストバスター田中",
-        "url": "https://www.youtube.com/@%E3%82%B4%E3%83%BC%E3%82%B9%E3%83%88%E3%83%90%E3%82%B9%E3%82%BF%E3%83%BC%E7%94%B0%E4%B8%AD"
+        "url": "https://www.youtube.com/@ゴーストバスター田中"
       },
       {
         "name": "ひがりん",
-        "url": "https://www.youtube.com/@%E3%81%B2%E3%81%8C%E3%82%8A%E3%82%93-s2i"
+        "url": "https://www.youtube.com/@ひがりん-s2i"
       }
     ]
   },
@@ -289,7 +289,7 @@
     "specialists": [
       {
         "name": "のんぽり",
-        "url": "https://www.youtube.com/@%E3%81%AE%E3%82%93%E3%81%BD%E3%82%8A"
+        "url": "https://www.youtube.com/@のんぽり"
       },
       {
         "name": "Stalked",
@@ -297,7 +297,7 @@
       },
       {
         "name": "氾濫するふんどし",
-        "url": "https://www.youtube.com/@%E3%81%B5%E3%82%93%E3%81%A9%E3%81%97_GhostFace"
+        "url": "https://www.youtube.com/@ふんどし_GhostFace"
       }
     ]
   },
@@ -352,7 +352,7 @@
       },
       {
         "name": "とき△",
-        "url": "https://www.youtube.com/@%E3%81%A8%E3%81%8D%E3%81%95%E3%82%93%E3%81%8B%E3%81%8F"
+        "url": "https://www.youtube.com/@ときさんかく"
       },
       {
         "name": "ガマふぐ仙人",
@@ -386,7 +386,7 @@
       },
       {
         "name": "イトコ0607",
-        "url": "https://www.youtube.com/@%E3%82%A4%E3%83%88%E3%82%B30607"
+        "url": "https://www.youtube.com/@イトコ0607"
       },
       {
         "name": "EX",
@@ -394,7 +394,7 @@
       },
       {
         "name": "わら",
-        "url": "https://www.youtube.com/@%E3%82%8F%E3%82%89-y6b"
+        "url": "https://www.youtube.com/@わら-y6b"
       }
     ]
   },
@@ -402,7 +402,7 @@
     "id": "twins",
     "displayName": "ツインズ",
     "imageName": "K22_TheTwins_Portrait.webp",
-    "description": "本名：シャルロット・デュクシャイ\nヴィクトル・デュクシャイ\n\n基本情報\n心音32m、移動速度4.6m/s。姉弟の2体を切り替えて操作し、連携して狩る。",
+    "description": "本名：シャルロット・デュクシャイ\n　　　ヴィクトル・デュクシャイ\n\n基本情報\n心音32m、移動速度4.6m/s。姉弟の2体を切り替えて操作し、連携して狩る。",
     "youtubePlaylistId": "PLp1FBdXwpJDWWqWST8uFIXOBjl2YrTwO9",
     "enjoyPlaylistId": "PLp1FBdXwpJDW2wSO8U4oVoB7TW2gCh3ih",
     "specialists": []
@@ -462,7 +462,7 @@
     "id": "artist",
     "displayName": "アーティスト",
     "imageName": "K26_TheArtist_Portrait.webp",
-    "description": "本名カルミナ・モーラ\n\n基本情報\n心音32m、移動速度4.6m/s。インクのカラスを放ち、壁の向こうのサバイバーを攻撃・索敵する。",
+    "description": "本名：カルミナ・モーラ\n\n基本情報\n心音32m、移動速度4.6m/s。インクのカラスを放ち、壁の向こうのサバイバーを攻撃・索敵する。",
     "youtubePlaylistId": "PLp1FBdXwpJDWcou9X22N9727exxX_u3Yk",
     "otherLinks": [
       {
@@ -490,7 +490,7 @@
       },
       {
         "name": "うずめ",
-        "url": "https://www.youtube.com/@%E3%81%86%E3%81%9A%E3%82%81"
+        "url": "https://www.youtube.com/@うずめ"
       }
     ]
   },
@@ -641,7 +641,7 @@
       },
       {
         "name": "ひろ",
-        "url": "https://www.youtube.com/@%E3%81%B2%E3%82%8Dun"
+        "url": "https://www.youtube.com/@ひろun"
       }
     ]
   },
@@ -700,7 +700,7 @@
       },
       {
         "name": "ゆるゆるにこ",
-        "url": "https://www.youtube.com/@%E3%82%86%E3%82%8B%E3%82%86%E3%82%8B%E3%81%AB%E3%81%93"
+        "url": "https://www.youtube.com/@ゆるゆるにこ"
       }
     ]
   },
@@ -726,7 +726,7 @@
     "id": "first",
     "displayName": "ファースト",
     "imageName": "K42_TheFirst_Portrait.webp",
-    "description": "本名：不明\n\n基本情報\n\n心音32m、移動速度4.4m/s。",
+    "description": "本名：不明\n\n基本情報\n心音32m、移動速度4.4m/s。",
     "youtubePlaylistId": "PLp1FBdXwpJDU8r5dGnGNmwv1Xyf_Lj-Hx",
     "enjoyPlaylistId": "PLp1FBdXwpJDUlmNne_i10LtvMaEt5HMVB",
     "specialists": []
