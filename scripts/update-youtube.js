@@ -22,18 +22,29 @@ const updatesPath = path.join(__dirname, '../src/data/updates.json');
 // YouTube Data APIを叩いて最新の動画追加日を取得
 async function getLatestVideoDate(playlistId) {
     if (!playlistId) return null;
+    let latestDate = null;
+    let pageToken = '';
     try {
-        const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${playlistId}&maxResults=1&key=${API_KEY}`;
-        const res = await fetch(url);
-        if (!res.ok) {
-            console.error(`Error fetching playlist ${playlistId}: ${res.statusText}`);
-            return null;
-        }
-        const data = await res.json();
-        if (data.items && data.items.length > 0) {
-            // snippet.publishedAt はプレイリストに動画が追加された日時
-            return new Date(data.items[0].snippet.publishedAt);
-        }
+        do {
+            const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${playlistId}&maxResults=50${pageToken ? '&pageToken=' + pageToken : ''}&key=${API_KEY}`;
+            const res = await fetch(url);
+            if (!res.ok) {
+                console.error(`Error fetching playlist ${playlistId}: ${res.statusText}`);
+                break;
+            }
+            const data = await res.json();
+            if (data.items && data.items.length > 0) {
+                for (const item of data.items) {
+                    // snippet.publishedAt はプレイリストに動画が追加された日時
+                    const itemDate = new Date(item.snippet.publishedAt);
+                    if (!latestDate || itemDate > latestDate) {
+                        latestDate = itemDate;
+                    }
+                }
+            }
+            pageToken = data.nextPageToken;
+        } while (pageToken);
+        return latestDate;
     } catch (e) {
         console.error(`Failed to fetch playlist ${playlistId}:`, e);
     }

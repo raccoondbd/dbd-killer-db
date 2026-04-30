@@ -61,7 +61,7 @@ const TopPage = () => {
             <section className="update-info-section">
                 <h2>更新情報</h2>
                 <ul className="update-list">
-                    {updates.map((update, index) => (
+                    {updates.slice(0, 3).map((update, index) => (
                         <li key={index}>
                             <span className="update-date">{update.date}</span>
                             {update.content}
