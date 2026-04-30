@@ -12,7 +12,7 @@ if (!API_KEY) {
 }
 
 // 過去何日以内の追加を「NEW」とするか
-const NEW_THRESHOLD_DAYS = 7;
+const NEW_THRESHOLD_DAYS = 3;
 const thresholdDate = new Date();
 thresholdDate.setDate(thresholdDate.getDate() - NEW_THRESHOLD_DAYS);
 
