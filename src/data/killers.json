@@ -538,7 +538,8 @@
         "name": "FirstDBD",
         "url": "https://www.twitch.tv/firstdbd"
       }
-    ]
+    ],
+    "isNew": true
   },
   {
     "id": "knight",
