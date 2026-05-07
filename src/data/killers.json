@@ -315,7 +315,8 @@
     "imageName": "K18_TheOni_Portrait.webp",
     "description": "本名：山岡 凱山（かざん）\n\n基本情報\n心音32m、移動速度4.6m/s。血の球を吸収して怒り状態になり、金棒で一撃ダウンを狙う。",
     "youtubePlaylistId": "PLp1FBdXwpJDUDfxmJsZyPSVdEn1ZwSEQZ",
-    "specialists": []
+    "specialists": [],
+    "isNew": true
   },
   {
     "id": "deathslinger",
@@ -538,8 +539,7 @@
         "name": "FirstDBD",
         "url": "https://www.twitch.tv/firstdbd"
       }
-    ],
-    "isNew": true
+    ]
   },
   {
     "id": "knight",
