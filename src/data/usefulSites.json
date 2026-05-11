@@ -22,5 +22,23 @@
     "title": "Dead by Daylight Wiki (wiki.gg)",
     "url": "https://deadbydaylight.wiki.gg/",
     "description": "最も情報量が多いデータベース（英語）。キラーの移動速度、能力の細かい仕様や判定、過去のパッチノートなど、正確なデータを知りたい時に役立ちます。"
+  },
+  {
+    "id": "map-guide",
+    "title": "Steamガイド: Map Layouts, Callouts, and Tiles",
+    "url": "https://steamcommunity.com/sharedfiles/filedetails/?l=japanese&id=2904838739",
+    "description": "各マップの構造、主要なポジション（ジャングルジムなど）の名称、タイル構成を網羅した非常に質の高いガイドです。チェイス中の読み合いや連携に役立ちます。"
+  },
+  {
+    "id": "entity-rating",
+    "title": "DBD ENTITY RATING (非公式ランクリーグ)",
+    "url": "https://dbd-rank-league.web.app/home.html",
+    "description": "非公式のランクマッチを運営しているサイト。独自のレーティングシステムにより、実力の近いプレイヤー同士で対戦できるのが特徴です。"
+  },
+  {
+    "id": "dbd-league",
+    "title": "DBD League (YouTube)",
+    "url": "https://www.youtube.com/@dbdleague",
+    "description": "海外の最大手大会団体。世界トップレベルのチームによるハイレベルな試合を視聴でき、最新のメタや立ち回りの研究に非常に役立ちます。"
   }
 ]

@@ -8,15 +8,26 @@
 
 /* Hero */
 .creators-back {
-    display: inline-block;
-    margin-bottom: 1.5rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.05);
     color: var(--color-text-dim);
-    font-size: 0.9rem;
-    transition: color 0.2s;
     text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    margin-bottom: 1.5rem;
 }
+
 .creators-back:hover {
+    background: rgba(255, 255, 255, 0.1);
     color: var(--color-primary);
+    border-color: var(--color-primary);
+    transform: translateX(-4px);
     text-decoration: none;
 }
 

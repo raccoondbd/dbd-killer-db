@@ -17,7 +17,7 @@ const CommonGuidePage = () => {
 
     return (
         <div className="common-page" style={{ padding: '2rem', maxWidth: '1000px', margin: '0 auto' }}>
-            <Link to="/" style={{ color: 'var(--color-primary)' }}>&larr; Top Page</Link>
+            <Link to="/" className="back-link">← Top Page</Link>
             <h1 style={{ marginTop: '1rem', marginBottom: '2rem' }}>{title}</h1>
             <p style={{ marginTop: '1rem', whiteSpace: 'pre-wrap', marginBottom: '2rem' }}>{content}</p>
 

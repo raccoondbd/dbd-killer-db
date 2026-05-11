@@ -17,7 +17,10 @@ const TopPage = () => {
     return (
         <div className="top-page">
             <header className="hero-section">
-                <h1 className="main-title">DBDキラー攻略データベース</h1>
+                <h1 className="main-title">
+                    <span>DBDキラー攻略</span>
+                    <span>データベース</span>
+                </h1>
                 <p className="subtitle">各キラーのトップレベルの知識に最短で触れられるよう、有益な動画を整理しています。</p>
                 <div className="social-links-minimal">
                     <a href="https://www.youtube.com/@raccoondbd" target="_blank" rel="noopener noreferrer">YouTube</a>
@@ -52,6 +55,9 @@ const TopPage = () => {
                                     <div className="killer-icon-placeholder">No Image</div>
                                 )}
                                 {killer.isNew && <span className="new-badge">NEW</span>}
+                                <div className="killer-name-overlay">
+                                    <span className="killer-name-text">{killer.displayName}</span>
+                                </div>
                             </div>
                         </Link>
                     );
