@@ -13,7 +13,7 @@ const KillerPage = () => {
     const killerIndex = killers.findIndex(k => k.id === id);
     const prevKiller = killerIndex > 0 ? killers[killerIndex - 1] : null;
     const nextKiller = killerIndex < killers.length - 1 ? killers[killerIndex + 1] : null;
-    const [isExpanded, setIsExpanded] = useState(false);
+    const [visibleChunks, setVisibleChunks] = useState(1);
 
     if (!killer) {
         return <div className="error-message">Killer not found. <Link to="/">Return to Top</Link></div>;
@@ -26,6 +26,14 @@ const KillerPage = () => {
     };
 
     const imageSrc = getKillerImage(killer.imageName);
+
+    // Split description into blocks by double newlines
+    const blocks = killer.description ? killer.description.split('\n\n') : [];
+    // Group blocks into chunks of 3
+    const chunks = [];
+    for (let i = 0; i < blocks.length; i += 3) {
+        chunks.push(blocks.slice(i, i + 3).join('\n\n'));
+    }
 
     return (
         <div className="killer-page">
@@ -40,17 +48,33 @@ const KillerPage = () => {
                     {imageSrc && (
                         <img src={imageSrc} alt={killer.displayName} className="detail-icon" />
                     )}
-                    <p className={`killer-description ${isExpanded ? 'expanded' : 'collapsed'}`}>
-                        {killer.description}
-                    </p>
+                    <div className="killer-description-container">
+                        {chunks.map((chunk, index) => (
+                            <div 
+                                key={index} 
+                                className={`description-chunk ${index < visibleChunks ? 'visible' : 'hidden'}`}
+                            >
+                                <p className="description-text">{chunk}</p>
+                            </div>
+                        ))}
+                    </div>
                 </div>
 
-                <button
-                    className="description-toggle"
-                    onClick={() => setIsExpanded(!isExpanded)}
-                >
-                    {isExpanded ? '閉じる' : '続きを読む'}
-                </button>
+                {visibleChunks < chunks.length ? (
+                    <button
+                        className="description-toggle"
+                        onClick={() => setVisibleChunks(visibleChunks + 1)}
+                    >
+                        続きを読む ({visibleChunks}/{chunks.length})
+                    </button>
+                ) : chunks.length > 1 && (
+                    <button
+                        className="description-toggle"
+                        onClick={() => setVisibleChunks(1)}
+                    >
+                        閉じる
+                    </button>
+                )}
             </header>
 
             {killer.youtubePlaylistId && (

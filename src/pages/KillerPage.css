@@ -54,30 +54,38 @@
     /* Prevent shrinking */
 }
 
-.killer-description {
+.killer-description-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+
+.description-chunk {
+    transition: all 0.4s ease;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+}
+
+.description-chunk.visible {
+    opacity: 1;
+    max-height: 200rem; /* Large enough for a chunk */
+    margin-bottom: 1rem;
+}
+
+.description-chunk.hidden {
+    display: none;
+}
+
+.description-text {
     font-size: 1.1rem;
     color: var(--color-text-dim);
     white-space: pre-line;
     line-height: 1.7;
     text-align: left;
-    flex: 1;
-    /* Take remaining space */
-
-    /* Animation props */
-    overflow: hidden;
-    transition: max-height 0.8s ease;
-    max-height: 100rem;
-    /* Arbitrary large value for expanded state */
-}
-
-.killer-description.collapsed {
-    max-height: 9.5rem;
-    /* Approx 5 lines (1.1rem * 1.7 * 5) */
-
-    /* Remove line-clamp to allow height transition */
-    display: block;
-    -webkit-line-clamp: unset;
-    line-clamp: unset;
+    margin: 0;
 }
 
 .description-toggle {
@@ -208,11 +216,13 @@
         height: 120px;
     }
 
-    .killer-description {
+    .killer-description-container {
+        width: 100%;
+    }
+
+    .description-text {
         font-size: 1rem;
         text-align: left;
-        width: 100%;
-        max-height: none;
     }
 
     .killer-nav-name {
