@@ -642,8 +642,7 @@
         "name": "ひろ",
         "url": "https://www.youtube.com/@ひろun"
       }
-    ],
-    "isNew": true
+    ]
   },
   {
     "id": "lich",
@@ -665,7 +664,8 @@
     "imageName": "K37_TheDarkLord_Portrait.webp",
     "description": "本名：ドラキュラ\n\n基本情報\n心音32m、移動速度4.6m/s。『悪魔城ドラキュラ』のドラキュラ。変身能力を持つ。",
     "youtubePlaylistId": "PLp1FBdXwpJDVDzwMEpaW0gkhYfZvQHvXA",
-    "specialists": []
+    "specialists": [],
+    "isNew": true
   },
   {
     "id": "houndmaster",
