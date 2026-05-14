@@ -47,7 +47,8 @@
         "name": "DwichaelJackson",
         "url": "https://www.twitch.tv/dwichaeljackson"
       }
-    ]
+    ],
+    "isNew": true
   },
   {
     "id": "nurse",
@@ -299,8 +300,7 @@
         "name": "氾濫するふんどし",
         "url": "https://www.youtube.com/@ふんどし_GhostFace"
       }
-    ],
-    "isNew": true
+    ]
   },
   {
     "id": "demogorgon",
