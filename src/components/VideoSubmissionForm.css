@@ -1,0 +1,112 @@
+.video-submission-box {
+    margin-top: 3rem;
+    padding: 1.5rem;
+    background: var(--color-surface);
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid var(--color-border);
+    transition: all 0.3s ease;
+}
+
+.video-submission-box.success {
+    background: rgba(46, 204, 113, 0.1);
+    border-color: #2ecc71;
+    color: #2ecc71;
+    font-weight: bold;
+}
+
+.video-submission-box.closed p {
+    margin-bottom: 1rem;
+    color: var(--color-text-muted);
+}
+
+.open-submission-btn {
+    background: var(--color-background);
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+    padding: 0.6rem 1.5rem;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.open-submission-btn:hover {
+    background: var(--color-primary);
+    color: #fff;
+}
+
+.submission-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.submission-header h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--color-text);
+}
+
+.close-submission-btn {
+    background: none;
+    border: none;
+    color: var(--color-text-muted);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.submission-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.submission-input {
+    width: 100%;
+    background: var(--color-background);
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    padding: 0.8rem;
+    color: var(--color-text);
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+.submission-input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+}
+
+.msg-input {
+    resize: vertical;
+}
+
+.submission-submit-btn {
+    background: var(--color-primary);
+    color: #fff;
+    border: none;
+    padding: 0.8rem;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.submission-submit-btn:hover:not(:disabled) {
+    opacity: 0.9;
+}
+
+.submission-submit-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.submission-error-msg {
+    color: #e74c3c;
+    font-size: 0.9rem;
+    margin: 0;
+    text-align: left;
+    font-weight: bold;
+}

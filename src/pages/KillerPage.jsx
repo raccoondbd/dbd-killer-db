@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import killers from '../data/killers.json';
 import CustomYouTubePlaylist from '../components/CustomYouTubePlaylist';
+import TipsBoard from '../components/TipsBoard';
+import VideoSubmissionForm from '../components/VideoSubmissionForm';
 import './KillerPage.css';
 
 // Dynamically import all killer images
@@ -144,9 +146,9 @@ const KillerPage = () => {
                 </section>
             )}
 
-            <div style={{ marginTop: '3rem', padding: '1.5rem', background: 'var(--color-surface)', borderRadius: '8px', textAlign: 'center' }}>
-                <p>※ 参考になる・有益な動画があれば、ぜひ教えてください。内容は随時更新していきます。</p>
-            </div>
+            <TipsBoard killerId={killer.id} />
+
+            <VideoSubmissionForm killerId={killer.id} killerName={killer.displayName} />
 
             <nav className="killer-nav">
                 {prevKiller ? (

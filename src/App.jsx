@@ -4,6 +4,7 @@ import KillerPage from './pages/KillerPage';
 import CommonGuidePage from './pages/CommonGuidePage';
 import CreatorsPage from './pages/CreatorsPage';
 import UsefulSitesPage from './pages/UsefulSitesPage';
+import AdminPage from './pages/AdminPage';
 import ScrollToTop from './components/ScrollToTop';
 import GoogleAnalytics from './components/GoogleAnalytics';
 import Footer from './components/Footer';
@@ -21,6 +22,7 @@ function App() {
           <Route path="/common-guide/:type" element={<CommonGuidePage />} />
           <Route path="/creators" element={<CreatorsPage />} />
           <Route path="/useful-sites" element={<UsefulSitesPage />} />
+          <Route path="/admin-secret" element={<AdminPage />} />
         </Routes>
         <Footer />
       </div>

@@ -33,13 +33,13 @@ const TopPage = () => {
 
             <section className="common-guides">
                 <Link to="/common-guide/killer" className="guide-button killer-guide">
-                    キラー共通技術・立ち回り
+                    キラー共通技術
                 </Link>
                 <Link to="/common-guide/survivor" className="guide-button survivor-guide">
-                    サバイバー共通技術・知識
+                    サバイバー共通技術
                 </Link>
                 <Link to="/creators" className="guide-button creators-guide">
-                    クリエイター一覧 👥
+                    クリエイター名鑑
                 </Link>
             </section>
 

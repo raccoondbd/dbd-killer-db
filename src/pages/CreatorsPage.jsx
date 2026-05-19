@@ -1,6 +1,10 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { collection, query, where, getDocs } from 'firebase/firestore';
+import { db } from '../firebase';
 import creators from '../data/creators.json';
+import killers from '../data/killers.json';
+import CreatorApplicationForm from '../components/CreatorApplicationForm';
 import './CreatorsPage.css';
 
 const FIXED_TAGS = [
@@ -8,13 +12,16 @@ const FIXED_TAGS = [
     { label: 'キラー専', color: 'tag-killer' },
     { label: 'サバイバー専', color: 'tag-survivor' },
     { label: '両陣営', color: 'tag-both' },
-    { label: 'エンジョイ勢', color: 'tag-enjoy' },
     { label: 'キラー多め', color: 'tag-killer-leaning' },
     { label: 'サバイバー多め', color: 'tag-surv-leaning' },
-    { label: '解説・攻略', color: 'tag-guide' },
     { label: '配信', color: 'tag-stream' },
-    { label: 'YouTube', color: 'tag-youtube' },
-    { label: 'アーティスト専', color: 'tag-artist' },
+    { label: '動画投稿', color: 'tag-youtube' },
+    { label: '解説・攻略', color: 'tag-guide' },
+    { label: 'ネタ・おもしろ', color: 'tag-enjoy' },
+    { label: 'エンジョイ勢', color: 'tag-enjoy' },
+    { label: 'ガチ勢', color: 'tag-pro' },
+    { label: '大会勢', color: 'tag-pro' },
+    { label: '初心者歓迎', color: 'tag-guide' },
 ];
 
 const FIXED_TAG_COLOR_MAP = Object.fromEntries(FIXED_TAGS.map(t => [t.label, t.color]));
@@ -33,14 +40,40 @@ const CreatorsPage = () => {
     const [searchQuery, setSearchQuery] = useState('');
     const [selectedTags, setSelectedTags] = useState([]);
     const [showKillerTags, setShowKillerTags] = useState(false);
+    const [isAppModalOpen, setIsAppModalOpen] = useState(false);
+    const [firebaseCreators, setFirebaseCreators] = useState([]);
 
-    const toggleTag = (tag) => {
-        setSelectedTags(prev =>
-            prev.includes(tag) ? prev.filter(t => t !== tag) : [...prev, tag]
-        );
-    };
+    useEffect(() => {
+        const fetchApprovedCreators = async () => {
+            try {
+                const q = query(collection(db, 'creatorApplications'), where('status', '==', 'approved'));
+                const snapshot = await getDocs(q);
+                const loaded = snapshot.docs.map(doc => {
+                    const data = doc.data();
+                    const tagsArray = data.tags ? data.tags.split(',').map(t => t.trim()).filter(Boolean) : [];
+                    const sns = {};
+                    if (data.xUrl) sns.x = data.xUrl;
+                    if (data.youtubeUrl) sns.youtube = data.youtubeUrl;
+                    if (data.twitchUrl) sns.twitch = data.twitchUrl;
 
-    const filtered = useMemo(() => {
+                    return {
+                        id: doc.id,
+                        name: data.name,
+                        description: data.description,
+                        tags: tagsArray,
+                        sns: sns,
+                        avatarUrl: data.avatarUrl || ''
+                    };
+                });
+                setFirebaseCreators(loaded);
+            } catch (error) {
+                console.error("Error fetching approved creators:", error);
+            }
+        };
+        fetchApprovedCreators();
+    }, []);
+
+    const filteredJson = useMemo(() => {
         return creators.filter(creator => {
             const matchesName = creator.name.toLowerCase().includes(searchQuery.toLowerCase());
             const matchesTags =
@@ -50,20 +83,59 @@ const CreatorsPage = () => {
         });
     }, [searchQuery, selectedTags]);
 
+    const filteredFirebase = useMemo(() => {
+        return firebaseCreators.filter(creator => {
+            const matchesName = creator.name.toLowerCase().includes(searchQuery.toLowerCase());
+            const matchesTags =
+                selectedTags.length === 0 ||
+                selectedTags.every(tag => creator.tags.includes(tag));
+            return matchesName && matchesTags;
+        });
+    }, [searchQuery, selectedTags, firebaseCreators]);
+
+    const allCreators = useMemo(() => [...creators, ...firebaseCreators], [firebaseCreators]);
+    const totalVisible = filteredJson.length + filteredFirebase.length;
+
+    const toggleTag = (tag) => {
+        setSelectedTags(prev =>
+            prev.includes(tag) ? prev.filter(t => t !== tag) : [...prev, tag]
+        );
+    };
+
     // データに存在するタグを固定タグとキラー名タグに分ける
-    const usedTagSet = useMemo(() => new Set(creators.flatMap(c => c.tags)), []);
+    const usedTagSet = useMemo(() => new Set(allCreators.flatMap(c => c.tags)), [allCreators]);
     const usedFixedTags = FIXED_TAGS.filter(t => usedTagSet.has(t.label));
-    const killerNameTags = [...usedTagSet].filter(t => !FIXED_TAG_COLOR_MAP[t]).sort();
+    const killerNameTags = [...usedTagSet].filter(t => {
+        if (FIXED_TAG_COLOR_MAP[t]) return false;
+        // killers.jsonに登録されているキラー名を含むタグのみをキラー名タグとする
+        return killers.some(k => t.includes(k.displayName));
+    }).sort((a, b) => {
+        const getKillerIndex = (tag) => {
+            const index = killers.findIndex(k => tag.includes(k.displayName));
+            return index === -1 ? 999 : index;
+        };
+        const indexA = getKillerIndex(a);
+        const indexB = getKillerIndex(b);
+        if (indexA !== indexB) {
+            return indexA - indexB;
+        }
+        return a.localeCompare(b);
+    });
 
     return (
         <div className="creators-page">
             <header className="creators-hero">
                 <Link to="/" className="back-link creators-back">← トップへ戻る</Link>
-                <h1 className="creators-title">DBDクリエイター一覧</h1>
+                <h1 className="creators-title">DBDクリエイター名鑑</h1>
                 <p className="creators-subtitle">
                     DBDをコンテンツとして活動するプレイヤー・クリエイターの紹介ページです。
                 </p>
+                <button className="apply-creator-btn" onClick={() => setIsAppModalOpen(true)}>
+                    ✍️ クリエイターとして掲載申請する
+                </button>
             </header>
+
+            {isAppModalOpen && <CreatorApplicationForm onClose={() => setIsAppModalOpen(false)} />}
 
             {/* 検索 & フィルター */}
             <section className="creators-filter-section">
@@ -85,7 +157,7 @@ const CreatorsPage = () => {
                 <div className="tag-filter-area">
                     <span className="tag-filter-label">タグで絞り込み：</span>
                     <div className="tag-filter-list">
-                        {usedFixedTags.map(tag => (
+                        {FIXED_TAGS.map(tag => (
                             <button
                                 key={tag.label}
                                 className={`tag-chip ${tag.color} ${selectedTags.includes(tag.label) ? 'active' : ''}`}
@@ -123,25 +195,39 @@ const CreatorsPage = () => {
                 )}
 
                 <div className="creators-count">
-                    {filtered.length} 件表示中 / 全 {creators.length} 件
+                    {totalVisible} 件表示中 / 全 {allCreators.length} 件
                 </div>
             </section>
 
-            {/* クリエイターカード一覧 */}
-            <main className="creators-grid">
-                {filtered.length > 0 ? (
-                    filtered.map(creator => (
-                        <CreatorCard key={creator.id} creator={creator} />
-                    ))
-                ) : (
-                    <div className="creators-empty">
-                        <p>条件に一致するクリエイターが見つかりませんでした。</p>
-                        <button className="tag-chip tag-clear" onClick={() => { setSearchQuery(''); setSelectedTags([]); }}>
-                            すべてリセット
-                        </button>
-                    </div>
-                )}
-            </main>
+            {totalVisible === 0 ? (
+                <div className="creators-empty">
+                    <p>条件に一致するクリエイターが見つかりませんでした。</p>
+                    <button className="tag-chip tag-clear" onClick={() => { setSearchQuery(''); setSelectedTags([]); }}>
+                        検索条件をクリア
+                    </button>
+                </div>
+            ) : (
+                <>
+                    {filteredJson.length > 0 && (
+                        <div className="creators-grid">
+                            {filteredJson.map(creator => (
+                                <CreatorCard key={creator.id} creator={creator} />
+                            ))}
+                        </div>
+                    )}
+
+                    {filteredFirebase.length > 0 && (
+                        <>
+                            {filteredJson.length > 0 && <hr className="creators-divider" />}
+                            <div className="creators-grid">
+                                {filteredFirebase.map(creator => (
+                                    <CreatorCard key={creator.id} creator={creator} />
+                                ))}
+                            </div>
+                        </>
+                    )}
+                </>
+            )}
 
             <footer className="creators-footer">
                 <p>
@@ -155,6 +241,11 @@ const CreatorCard = ({ creator }) => {
     const [expanded, setExpanded] = useState(false);
     const [avatarError, setAvatarError] = useState(false);
     const isLong = creator.description && creator.description.length > 80;
+
+    // アバターURLが変わったらエラー状態をリセット
+    useEffect(() => {
+        setAvatarError(false);
+    }, [creator.avatarUrl]);
 
     return (
         <article className="creator-card">

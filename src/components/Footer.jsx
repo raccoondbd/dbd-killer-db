@@ -9,7 +9,7 @@ const Footer = () => {
                 <nav className="footer-links">
                     <Link to="/useful-sites" className="footer-link">お役立ちサイト集 🌐</Link>
                 </nav>
-                <p className="footer-copy">&copy; 2026 DBDキラー攻略データベース</p>
+                <p className="footer-copy">DBDキラー攻略データベース</p>
             </div>
         </footer>
     );

@@ -1,0 +1,111 @@
+.admin-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.admin-page h1 {
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+}
+
+.admin-page > p {
+    color: #e74c3c;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.admin-section {
+    margin-bottom: 3rem;
+    background: var(--color-surface);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--color-border);
+}
+
+.admin-section h2 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 0.5rem;
+}
+
+.admin-card-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.admin-card {
+    background: var(--color-background);
+    padding: 1.5rem;
+    border-radius: 6px;
+    border-left: 4px solid #555;
+}
+
+.admin-card.pending {
+    border-left-color: #f39c12;
+}
+
+.admin-card.approved {
+    border-left-color: #2ecc71;
+}
+
+.admin-card h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.admin-card p {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.admin-links {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.admin-links a {
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+
+.admin-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.admin-actions button {
+    padding: 0.6rem 1rem;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.admin-actions button:hover {
+    opacity: 0.8;
+}
+
+.approve-btn {
+    background: #2ecc71;
+    color: white;
+}
+
+.delete-btn {
+    background: #e74c3c;
+    color: white;
+}
+
+.admin-card.report {
+    border-left-color: #e74c3c;
+}
+
+.admin-card.video {
+    border-left-color: #3498db;
+}

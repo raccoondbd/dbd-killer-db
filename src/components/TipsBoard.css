@@ -1,0 +1,288 @@
+.tips-board-section {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--color-border);
+}
+
+.tips-board-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.tips-board-header h2 {
+    margin: 0;
+    color: var(--color-primary);
+    font-size: 1.5rem;
+}
+
+.open-form-btn {
+    background: var(--color-primary);
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.open-form-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.tips-board-container {
+    background: var(--color-surface);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.tips-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: var(--color-background);
+    border-radius: 8px;
+    border: 1px solid var(--color-primary);
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.reply-indicator {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(186, 21, 21, 0.1); /* fallback if color-primary-rgb doesn't work */
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    color: var(--color-primary);
+    font-weight: bold;
+    font-size: 0.9rem;
+    border-left: 3px solid var(--color-primary);
+}
+
+.cancel-reply-btn {
+    background: none;
+    border: none;
+    color: var(--color-text-muted);
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.tips-name-input {
+    width: 100%;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 0.8rem 1rem;
+    color: var(--color-text);
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+}
+
+.tips-input {
+    width: 100%;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 1rem;
+    color: var(--color-text);
+    font-size: 1rem;
+    resize: vertical;
+    min-height: 80px;
+    font-family: inherit;
+    transition: border-color 0.2s;
+    box-sizing: border-box;
+}
+
+.tips-name-input:focus,
+.tips-input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+}
+
+.tips-form-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+.form-action-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.tips-char-count {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+}
+
+.cancel-btn {
+    background: transparent;
+    color: var(--color-text-muted);
+    border: 1px solid var(--color-border);
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.cancel-btn:hover {
+    background: var(--color-surface);
+    color: var(--color-text);
+}
+
+.tips-submit-btn {
+    background: var(--color-primary);
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1.5rem;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: opacity 0.2s, transform 0.1s;
+}
+
+.tips-submit-btn:hover:not(:disabled) {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+.tips-submit-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.tips-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.no-tips {
+    text-align: center;
+    color: var(--color-text-muted);
+    font-style: italic;
+    padding: 2rem 0;
+}
+
+.tip-thread {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.tip-card {
+    background: var(--color-background);
+    padding: 1.2rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--color-primary);
+    transition: background-color 0.2s;
+}
+
+.tip-card:hover {
+    background: var(--color-surface);
+}
+
+.tip-child {
+    margin-left: 2rem;
+    border-left: 3px solid var(--color-text-muted);
+    background: rgba(0, 0, 0, 0.15);
+    padding: 1rem;
+}
+
+.tip-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.8rem;
+    font-size: 0.9rem;
+}
+
+.tip-author {
+    font-weight: bold;
+    color: var(--color-text);
+}
+
+.tip-date {
+    color: var(--color-text-muted);
+    font-size: 0.85rem;
+}
+
+.tip-content {
+    line-height: 1.6;
+    white-space: pre-wrap;
+    word-break: break-word;
+    color: var(--color-text);
+    margin: 0 0 1rem 0;
+}
+
+.tip-actions {
+    display: flex;
+    gap: 1rem;
+    opacity: 0.6;
+    transition: opacity 0.2s;
+}
+
+.tip-card:hover .tip-actions {
+    opacity: 1;
+}
+
+.tip-action-btn {
+    background: none;
+    border: none;
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    transition: all 0.2s;
+}
+
+.tip-action-btn:hover {
+    background: var(--color-background);
+    color: var(--color-text);
+}
+
+.delete-btn:hover {
+    color: #ff4d4d;
+}
+
+.report-btn:hover {
+    color: #ff9900;
+}
+
+.reply-btn:hover {
+    color: var(--color-primary);
+}
+
+.load-more-btn {
+    width: 100%;
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: var(--color-background);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    color: var(--color-text);
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.load-more-btn:hover {
+    background: var(--color-primary);
+    color: #fff;
+    border-color: var(--color-primary);
+}
