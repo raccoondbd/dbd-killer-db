@@ -8,6 +8,7 @@ import AdminPage from './pages/AdminPage';
 import ScrollToTop from './components/ScrollToTop';
 import GoogleAnalytics from './components/GoogleAnalytics';
 import Footer from './components/Footer';
+import BackToTopButton from './components/BackToTopButton';
 import './App.css';
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
           <Route path="/admin-secret" element={<AdminPage />} />
         </Routes>
         <Footer />
+        <BackToTopButton />
       </div>
     </HashRouter>
   );

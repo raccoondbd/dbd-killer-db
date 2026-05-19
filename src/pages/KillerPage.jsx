@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import killers from '../data/killers.json';
 import CustomYouTubePlaylist from '../components/CustomYouTubePlaylist';
@@ -16,6 +16,11 @@ const KillerPage = () => {
     const prevKiller = killerIndex > 0 ? killers[killerIndex - 1] : null;
     const nextKiller = killerIndex < killers.length - 1 ? killers[killerIndex + 1] : null;
     const [visibleChunks, setVisibleChunks] = useState(1);
+
+    // Reset visible description chunks when navigating to a different killer
+    useEffect(() => {
+        setVisibleChunks(1);
+    }, [id]);
 
     if (!killer) {
         return <div className="error-message">Killer not found. <Link to="/">Return to Top</Link></div>;
@@ -152,17 +157,23 @@ const KillerPage = () => {
 
             <nav className="killer-nav">
                 {prevKiller ? (
-                    <Link to={`/killer/${prevKiller.id}`} className="killer-nav-btn killer-nav-prev">
+                    <Link to={`/killer/${prevKiller.id}`} className="killer-nav-btn killer-nav-prev" title={`${prevKiller.displayName}へ`}>
                         <span className="killer-nav-arrow">←</span>
                         <span className="killer-nav-name">{prevKiller.displayName}</span>
                     </Link>
-                ) : <div />}
+                ) : <div className="killer-nav-empty" />}
+
+                <Link to="/" className="killer-nav-btn killer-nav-center" title="一覧に戻る">
+                    <span className="killer-nav-center-icon">🏠</span>
+                    <span className="killer-nav-center-text">一覧に戻る</span>
+                </Link>
+
                 {nextKiller ? (
-                    <Link to={`/killer/${nextKiller.id}`} className="killer-nav-btn killer-nav-next">
+                    <Link to={`/killer/${nextKiller.id}`} className="killer-nav-btn killer-nav-next" title={`${nextKiller.displayName}へ`}>
                         <span className="killer-nav-name">{nextKiller.displayName}</span>
                         <span className="killer-nav-arrow">→</span>
                     </Link>
-                ) : <div />}
+                ) : <div className="killer-nav-empty" />}
             </nav>
         </div>
     );

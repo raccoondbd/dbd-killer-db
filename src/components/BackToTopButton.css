@@ -1,0 +1,60 @@
+.back-to-top-btn {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: rgba(30, 30, 30, 0.85);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--color-text-dim);
+    font-size: 0.9rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(15px);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    z-index: 999;
+}
+
+.back-to-top-btn.visible {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.back-to-top-btn:hover {
+    background: var(--color-primary);
+    color: #ffffff;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 15px rgba(255, 51, 51, 0.5);
+    transform: translateY(-3px);
+}
+
+.back-to-top-btn:active {
+    transform: translateY(-1px);
+}
+
+.back-to-top-btn .arrow-icon {
+    transition: transform 0.2s ease;
+}
+
+.back-to-top-btn:hover .arrow-icon {
+    transform: translateY(-2px);
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .back-to-top-btn {
+        bottom: 1.5rem;
+        right: 1.2rem;
+        width: 42px;
+        height: 42px;
+        font-size: 0.8rem;
+    }
+}

@@ -45,16 +45,34 @@ const CreatorsPage = () => {
     const [sortBy, setSortBy] = useState('default'); // 'default' (初期値/古い順), 'newest' (新着順), 'name' (50音順)
     const [isSortOpen, setIsSortOpen] = useState(false);
 
-    const firebaseSectionRef = useRef(null);
+    const [isSpecialistsOpen, setIsSpecialistsOpen] = useState(false);
     const sortWrapperRef = useRef(null);
-    const isFirstRender = useRef(true);
     const filterSectionRef = useRef(null);
+    const specialistsSectionRef = useRef(null);
+    const firebaseCreatorsRef = useRef(null);
 
-    // 検索・ソートエリアへスクロールバックする関数
-    const scrollToFilter = () => {
-        if (filterSectionRef.current) {
-            filterSectionRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
+    // スペシャリストのトグルハンドラー（折りたたんだ際に位置調整）
+    const handleSpecialistsToggle = () => {
+        setIsSpecialistsOpen(prev => {
+            const next = !prev;
+            if (!next) {
+                // 折りたたむ瞬間に、折りたたまれたボタンが画面の上の方（上端から約250px下）に見えるようにスクロール
+                setTimeout(() => {
+                    if (specialistsSectionRef.current) {
+                        const elementPosition = specialistsSectionRef.current.getBoundingClientRect().top + window.pageYOffset;
+                        // 折りたたまれた状態でのボタン位置（セクション上端から約520px下）が
+                        // 画面の上端から約270px下に見えるように、スクロール位置を調整
+                        const offsetPosition = elementPosition + 250;
+                        
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                }, 100);
+            }
+            return next;
+        });
     };
 
     // ドロップダウンの外側をクリックした時に閉じる
@@ -67,17 +85,6 @@ const CreatorsPage = () => {
         document.addEventListener('mousedown', handleClickOutside);
         return () => document.removeEventListener('mousedown', handleClickOutside);
     }, []);
-
-    // 並び替え順が変更された時に公募枠のトップまで自動スクロール
-    useEffect(() => {
-        if (isFirstRender.current) {
-            isFirstRender.current = false;
-            return;
-        }
-        if (firebaseSectionRef.current) {
-            firebaseSectionRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-    }, [sortBy]);
 
     useEffect(() => {
         const fetchApprovedCreators = async () => {
@@ -305,45 +312,37 @@ const CreatorsPage = () => {
             ) : (
                 <>
                     {filteredJson.length > 0 && (
-                        <div className="creators-grid">
-                            {filteredJson.map(creator => (
-                                <CreatorCard key={creator.id} creator={creator} />
-                            ))}
+                        <div ref={specialistsSectionRef} className="specialists-section">
+                            <div className={`specialists-wrapper ${isSpecialistsOpen ? 'expanded' : 'collapsed'}`}>
+                                <div className="creators-grid">
+                                    {filteredJson.map(creator => (
+                                        <CreatorCard key={creator.id} creator={creator} />
+                                    ))}
+                                </div>
+                                {filteredJson.length > 6 && !isSpecialistsOpen && (
+                                    <div className="specialists-fade-overlay" />
+                                )}
+                            </div>
+                            {filteredJson.length > 6 && (
+                                <div className="specialists-action-area">
+                                    <button 
+                                        type="button" 
+                                        className="specialists-toggle-trigger-btn"
+                                        onClick={handleSpecialistsToggle}
+                                    >
+                                        {isSpecialistsOpen ? '▲ スペシャリストを折りたたむ' : `▼ すべてのスペシャリストを表示する (${filteredJson.length})`}
+                                    </button>
+                                </div>
+                            )}
                         </div>
                     )}
 
                     {filteredFirebase.length > 0 && (
-                        <>
-                            {filteredJson.length > 0 ? (
-                                <div ref={firebaseSectionRef} className="firebase-section-header">
-                                    <hr className="creators-divider" />
-                                    <button 
-                                        type="button" 
-                                        className="back-to-filter-btn"
-                                        onClick={scrollToFilter}
-                                    >
-                                        ▲ 検索・ソートに戻る
-                                    </button>
-                                </div>
-                            ) : (
-                                <div ref={firebaseSectionRef} />
-                            )}
-                            <div className="creators-grid">
-                                {filteredFirebase.map(creator => (
-                                    <CreatorCard key={creator.id} creator={creator} />
-                                ))}
-                            </div>
-
-                            <div className="creators-bottom-actions">
-                                <button 
-                                    type="button" 
-                                    className="back-to-filter-btn"
-                                    onClick={scrollToFilter}
-                                >
-                                    ▲ 検索・ソートに戻る
-                                </button>
-                            </div>
-                        </>
+                        <div ref={firebaseCreatorsRef} className="creators-grid">
+                            {filteredFirebase.map(creator => (
+                                <CreatorCard key={creator.id} creator={creator} />
+                            ))}
+                        </div>
                     )}
                 </>
             )}

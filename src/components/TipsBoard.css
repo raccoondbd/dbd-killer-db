@@ -2,6 +2,7 @@
     margin-top: 3rem;
     padding-top: 2rem;
     border-top: 1px solid var(--color-border);
+    text-align: left;
 }
 
 .tips-board-header {
@@ -37,7 +38,7 @@
 .tips-board-container {
     background: var(--color-surface);
     border-radius: 12px;
-    padding: 1.5rem;
+    padding: 1.2rem 1rem;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
@@ -46,7 +47,7 @@
     flex-direction: column;
     gap: 0.8rem;
     margin-bottom: 2rem;
-    padding: 1.5rem;
+    padding: 1.2rem 1rem;
     background: var(--color-background);
     border-radius: 8px;
     border: 1px solid var(--color-primary);
@@ -187,9 +188,8 @@
 
 .tip-card {
     background: var(--color-background);
-    padding: 1.2rem;
+    padding: 1rem;
     border-radius: 8px;
-    border-left: 4px solid var(--color-primary);
     transition: background-color 0.2s;
 }
 
@@ -198,10 +198,10 @@
 }
 
 .tip-child {
-    margin-left: 2rem;
+    margin-left: 1.5rem;
     border-left: 3px solid var(--color-text-muted);
     background: rgba(0, 0, 0, 0.15);
-    padding: 1rem;
+    padding: 0.8rem;
 }
 
 .tip-header {
@@ -285,4 +285,21 @@
     background: var(--color-primary);
     color: #fff;
     border-color: var(--color-primary);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .tips-board-container {
+        padding: 0.8rem 0.5rem;
+    }
+    .tips-form {
+        padding: 0.8rem 0.6rem;
+    }
+    .tip-card {
+        padding: 0.8rem 0.6rem;
+    }
+    .tip-child {
+        margin-left: 0.6rem;
+        padding: 0.6rem;
+    }
 }
