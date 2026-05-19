@@ -102,6 +102,24 @@ const CreatorApplicationForm = ({ onClose }) => {
             return;
         }
 
+        // 🚨 YouTube URLのチェック
+        if (formData.youtubeUrl.trim() && !formData.youtubeUrl.includes('youtube.com/') && !formData.youtubeUrl.includes('youtu.be/')) {
+            setErrorMsg('YouTubeのURLが正しくありません。');
+            return;
+        }
+
+        // 🚨 Twitch URLのチェック
+        if (formData.twitchUrl.trim() && !formData.twitchUrl.includes('twitch.tv/')) {
+            setErrorMsg('TwitchのURLが正しくありません。');
+            return;
+        }
+
+        // 🚨 アバターURLのスキーマチェック（http/httpsのみ許可。javascript:などのXSS対策）
+        if (formData.avatarUrl.trim() && !/^https?:\/\//i.test(formData.avatarUrl.trim())) {
+            setErrorMsg('アイコン画像URLは「http://」または「https://」で始まる必要があります。');
+            return;
+        }
+
         // 1日の申請制限
         const today = new Date().toLocaleDateString();
         const dailyAppCountStr = localStorage.getItem('dailyAppCount');
