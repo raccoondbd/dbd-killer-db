@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect } from 'react';
+import React, { useState, useMemo, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { collection, query, where, getDocs } from 'firebase/firestore';
 import { db } from '../firebase';
@@ -42,6 +42,42 @@ const CreatorsPage = () => {
     const [showKillerTags, setShowKillerTags] = useState(false);
     const [isAppModalOpen, setIsAppModalOpen] = useState(false);
     const [firebaseCreators, setFirebaseCreators] = useState([]);
+    const [sortBy, setSortBy] = useState('default'); // 'default' (初期値/古い順), 'newest' (新着順), 'name' (50音順)
+    const [isSortOpen, setIsSortOpen] = useState(false);
+
+    const firebaseSectionRef = useRef(null);
+    const sortWrapperRef = useRef(null);
+    const isFirstRender = useRef(true);
+    const filterSectionRef = useRef(null);
+
+    // 検索・ソートエリアへスクロールバックする関数
+    const scrollToFilter = () => {
+        if (filterSectionRef.current) {
+            filterSectionRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    };
+
+    // ドロップダウンの外側をクリックした時に閉じる
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (sortWrapperRef.current && !sortWrapperRef.current.contains(event.target)) {
+                setIsSortOpen(false);
+            }
+        };
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => document.removeEventListener('mousedown', handleClickOutside);
+    }, []);
+
+    // 並び替え順が変更された時に公募枠のトップまで自動スクロール
+    useEffect(() => {
+        if (isFirstRender.current) {
+            isFirstRender.current = false;
+            return;
+        }
+        if (firebaseSectionRef.current) {
+            firebaseSectionRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    }, [sortBy]);
 
     useEffect(() => {
         const fetchApprovedCreators = async () => {
@@ -62,7 +98,8 @@ const CreatorsPage = () => {
                         description: data.description,
                         tags: tagsArray,
                         sns: sns,
-                        avatarUrl: data.avatarUrl || ''
+                        avatarUrl: data.avatarUrl || '',
+                        createdAt: data.createdAt ? data.createdAt.toDate() : new Date()
                     };
                 });
                 setFirebaseCreators(loaded);
@@ -84,14 +121,31 @@ const CreatorsPage = () => {
     }, [searchQuery, selectedTags]);
 
     const filteredFirebase = useMemo(() => {
-        return firebaseCreators.filter(creator => {
+        let list = firebaseCreators.filter(creator => {
             const matchesName = creator.name.toLowerCase().includes(searchQuery.toLowerCase());
             const matchesTags =
                 selectedTags.length === 0 ||
                 selectedTags.every(tag => creator.tags.includes(tag));
             return matchesName && matchesTags;
         });
-    }, [searchQuery, selectedTags, firebaseCreators]);
+
+        if (sortBy === 'name') {
+            list = [...list].sort((a, b) => a.name.localeCompare(b.name, 'ja'));
+        } else if (sortBy === 'newest') {
+            list = [...list].sort((a, b) => b.createdAt - a.createdAt); // 新着順（新しい順）
+        } else {
+            list = [...list].sort((a, b) => a.createdAt - b.createdAt); // デフォルト（古い順）
+        }
+
+        // 「らこん」を常に最後尾に配置する
+        const raconIndex = list.findIndex(c => c.name.includes('らこん'));
+        if (raconIndex !== -1) {
+            const [racon] = list.splice(raconIndex, 1);
+            list.push(racon);
+        }
+
+        return list;
+    }, [searchQuery, selectedTags, firebaseCreators, sortBy]);
 
     const allCreators = useMemo(() => [...creators, ...firebaseCreators], [firebaseCreators]);
     const totalVisible = filteredJson.length + filteredFirebase.length;
@@ -138,20 +192,62 @@ const CreatorsPage = () => {
             {isAppModalOpen && <CreatorApplicationForm onClose={() => setIsAppModalOpen(false)} />}
 
             {/* 検索 & フィルター */}
-            <section className="creators-filter-section">
-                <div className="creators-search-wrapper">
-                    <span className="search-icon">🔍</span>
-                    <input
-                        id="creator-search"
-                        type="text"
-                        className="creators-search"
-                        placeholder="名前で検索..."
-                        value={searchQuery}
-                        onChange={e => setSearchQuery(e.target.value)}
-                    />
-                    {searchQuery && (
-                        <button className="search-clear" onClick={() => setSearchQuery('')} aria-label="検索をクリア">✕</button>
-                    )}
+            <section ref={filterSectionRef} className="creators-filter-section">
+                <div className="creators-filter-controls">
+                    <div className="creators-search-wrapper">
+                        <span className="search-icon">🔍</span>
+                        <input
+                            id="creator-search"
+                            type="text"
+                            className="creators-search"
+                            placeholder="名前で検索..."
+                            value={searchQuery}
+                            onChange={e => setSearchQuery(e.target.value)}
+                        />
+                        {searchQuery && (
+                            <button className="search-clear" onClick={() => setSearchQuery('')} aria-label="検索をクリア">✕</button>
+                        )}
+                    </div>
+
+                    <div className="creators-sort-container" ref={sortWrapperRef}>
+                        <span className="sort-label">並び替え：</span>
+                        <div className={`custom-sort-dropdown ${isSortOpen ? 'open' : ''}`}>
+                            <button 
+                                type="button"
+                                className="sort-dropdown-toggle"
+                                onClick={() => setIsSortOpen(prev => !prev)}
+                            >
+                                <span>
+                                    {sortBy === 'default' && 'デフォルト'}
+                                    {sortBy === 'newest' && '新着順'}
+                                    {sortBy === 'name' && '50音順 (簡易)'}
+                                </span>
+                                <span className="dropdown-arrow">▼</span>
+                            </button>
+                            {isSortOpen && (
+                                <ul className="sort-dropdown-menu">
+                                    <li 
+                                        className={sortBy === 'default' ? 'active' : ''}
+                                        onClick={() => { setSortBy('default'); setIsSortOpen(false); }}
+                                    >
+                                        デフォルト
+                                    </li>
+                                    <li 
+                                        className={sortBy === 'newest' ? 'active' : ''}
+                                        onClick={() => { setSortBy('newest'); setIsSortOpen(false); }}
+                                    >
+                                        新着順
+                                    </li>
+                                    <li 
+                                        className={sortBy === 'name' ? 'active' : ''}
+                                        onClick={() => { setSortBy('name'); setIsSortOpen(false); }}
+                                    >
+                                        50音順 (簡易)
+                                    </li>
+                                </ul>
+                            )}
+                        </div>
+                    </div>
                 </div>
 
                 <div className="tag-filter-area">
@@ -218,11 +314,34 @@ const CreatorsPage = () => {
 
                     {filteredFirebase.length > 0 && (
                         <>
-                            {filteredJson.length > 0 && <hr className="creators-divider" />}
+                            {filteredJson.length > 0 ? (
+                                <div ref={firebaseSectionRef} className="firebase-section-header">
+                                    <hr className="creators-divider" />
+                                    <button 
+                                        type="button" 
+                                        className="back-to-filter-btn"
+                                        onClick={scrollToFilter}
+                                    >
+                                        ▲ 検索・ソートに戻る
+                                    </button>
+                                </div>
+                            ) : (
+                                <div ref={firebaseSectionRef} />
+                            )}
                             <div className="creators-grid">
                                 {filteredFirebase.map(creator => (
                                     <CreatorCard key={creator.id} creator={creator} />
                                 ))}
+                            </div>
+
+                            <div className="creators-bottom-actions">
+                                <button 
+                                    type="button" 
+                                    className="back-to-filter-btn"
+                                    onClick={scrollToFilter}
+                                >
+                                    ▲ 検索・ソートに戻る
+                                </button>
                             </div>
                         </>
                     )}

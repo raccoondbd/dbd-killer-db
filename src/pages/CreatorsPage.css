@@ -57,6 +57,18 @@
     border: 1px solid #2a2a2a;
 }
 
+.creators-filter-controls {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1.2rem;
+}
+
+.creators-filter-controls .creators-search-wrapper {
+    margin-bottom: 0;
+    flex: 1;
+}
+
 .creators-search-wrapper {
     display: flex;
     align-items: center;
@@ -64,11 +76,112 @@
     border: 1px solid #333;
     border-radius: 8px;
     padding: 0 1rem;
-    margin-bottom: 1.2rem;
     transition: border-color 0.2s;
 }
 .creators-search-wrapper:focus-within {
     border-color: var(--color-primary);
+}
+
+/* Custom Sort Dropdown */
+.creators-sort-container {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.sort-label {
+    color: var(--color-text-dim);
+    font-size: 0.85rem;
+    white-space: nowrap;
+}
+
+.custom-sort-dropdown {
+    position: relative;
+    user-select: none;
+}
+
+.sort-dropdown-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.2rem;
+    background: #151515;
+    border: 1px solid #333;
+    color: var(--color-text);
+    padding: 0 1.2rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    min-width: 140px;
+    height: 44px;
+    font-family: var(--font-main);
+}
+
+.sort-dropdown-toggle:hover {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 10px rgba(192, 57, 43, 0.15);
+}
+
+.dropdown-arrow {
+    font-size: 0.7rem;
+    transition: transform 0.2s ease;
+    opacity: 0.7;
+    color: var(--color-primary);
+}
+
+.custom-sort-dropdown.open .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+.sort-dropdown-menu {
+    position: absolute;
+    top: calc(100% + 6px);
+    right: 0;
+    z-index: 100;
+    background: rgba(20, 20, 20, 0.95);
+    backdrop-filter: blur(10px);
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 0.4rem 0;
+    margin: 0;
+    list-style: none;
+    min-width: 160px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6), 0 0 15px rgba(192, 57, 43, 0.05);
+    animation: dropdownFadeIn 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes dropdownFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.sort-dropdown-menu li {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.85rem;
+    color: var(--color-text-dim);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.sort-dropdown-menu li:hover {
+    background: rgba(192, 57, 43, 0.12);
+    color: var(--color-primary);
+}
+
+.sort-dropdown-menu li.active {
+    background: rgba(192, 57, 43, 0.2);
+    color: #fff;
+    font-weight: bold;
+    border-left: 3px solid var(--color-primary);
+    padding-left: calc(1.2rem - 3px);
 }
 
 .search-icon {
@@ -428,6 +541,32 @@
         flex-direction: column;
         gap: 0.5rem;
     }
+    .creators-filter-controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .creators-sort-container {
+        width: 100%;
+        justify-content: space-between;
+    }
+    .custom-sort-dropdown {
+        flex: 1;
+        max-width: 220px;
+    }
+    .sort-dropdown-toggle {
+        width: 100%;
+    }
+    .firebase-section-header {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+    .firebase-section-header .creators-divider {
+        width: 100%;
+    }
+    .firebase-section-header .back-to-filter-btn {
+        margin-left: 0;
+    }
 }
 
 .apply-creator-btn {
@@ -447,4 +586,57 @@
 .apply-creator-btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 10px rgba(0,0,0,0.3);
+}
+
+/* ===== Back to Filter Button ===== */
+.firebase-section-header {
+    position: relative;
+    margin: 3rem 0 2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.firebase-section-header .creators-divider {
+    flex: 1;
+    margin: 0;
+    border-top: 2px dashed #333;
+}
+
+.back-to-filter-btn {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--color-text-dim);
+    padding: 0.5rem 1.2rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-left: 1.5rem;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: var(--font-main);
+}
+
+.back-to-filter-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(192, 57, 43, 0.1);
+}
+
+.creators-bottom-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.creators-bottom-actions .back-to-filter-btn {
+    margin-left: 0;
+    padding: 0.65rem 1.8rem;
+    font-size: 0.85rem;
 }

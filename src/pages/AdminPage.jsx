@@ -11,6 +11,16 @@ const AdminPage = () => {
     const [loading, setLoading] = useState(false);
     const [adminUser, setAdminUser] = useState(null);
     const [authChecking, setAuthChecking] = useState(true);
+    const [editingItem, setEditingItem] = useState(null); // { id, type }
+    const [editForm, setEditForm] = useState({
+        name: '',
+        tags: '',
+        xUrl: '',
+        youtubeUrl: '',
+        twitchUrl: '',
+        description: '',
+        avatarUrl: ''
+    });
 
     const ADMIN_UID = 'tZWguxrnhVTP9YlEMG4DQ6c0OlP2'; // 管理者のUID
 
@@ -152,6 +162,46 @@ const AdminPage = () => {
         } catch (error) { alert("削除に失敗しました。"); }
     };
 
+    // --- 編集モード開始 ---
+    const startEdit = (item, type) => {
+        setEditingItem({ id: item.id, type });
+        setEditForm({
+            name: item.name || '',
+            tags: item.tags || '',
+            xUrl: item.xUrl || '',
+            youtubeUrl: item.youtubeUrl || '',
+            twitchUrl: item.twitchUrl || '',
+            description: item.description || '',
+            avatarUrl: item.avatarUrl || ''
+        });
+    };
+
+    // --- 編集の保存 ---
+    const handleSaveEdit = async (e) => {
+        e.preventDefault();
+        if (!editingItem) return;
+
+        try {
+            const docRef = doc(db, 'creatorApplications', editingItem.id);
+            await updateDoc(docRef, {
+                name: editForm.name,
+                tags: editForm.tags,
+                xUrl: editForm.xUrl,
+                youtubeUrl: editForm.youtubeUrl,
+                twitchUrl: editForm.twitchUrl,
+                description: editForm.description,
+                avatarUrl: editForm.avatarUrl
+            });
+
+            alert("情報を更新しました。");
+            setEditingItem(null);
+            fetchAllData();
+        } catch (error) {
+            console.error("Failed to update creator info:", error);
+            alert("更新に失敗しました。");
+        }
+    };
+
     // --- 動画推薦の処理 ---
     const handleDeleteVideo = async (id) => {
         if (!window.confirm("この動画推薦を削除（確認済みに）しますか？")) return;
@@ -269,6 +319,7 @@ const AdminPage = () => {
                                 </div>
                                 <div className="admin-actions">
                                     <button className="approve-btn" onClick={() => handleApproveApp(app.id, app.type || 'new', app.targetCreatorId, app.targetSource)}>✅ 承認して掲載</button>
+                                    <button className="edit-btn" onClick={() => startEdit(app, 'pending')}>✏️ 修正する</button>
                                     <button className="delete-btn" onClick={() => handleDeleteApp(app.id)}>🗑 却下(削除)</button>
                                 </div>
                             </div>
@@ -290,9 +341,12 @@ const AdminPage = () => {
                                 <p><strong>アイコン:</strong> {app.avatarUrl || '(変更なし)'}</p>
                                 <div className="admin-links">
                                     <a href={app.xUrl} target="_blank" rel="noopener noreferrer">X(Twitter)確認</a>
+                                    {app.youtubeUrl && <a href={app.youtubeUrl} target="_blank" rel="noopener noreferrer">YouTube</a>}
+                                    {app.twitchUrl && <a href={app.twitchUrl} target="_blank" rel="noopener noreferrer">Twitch</a>}
                                 </div>
                                 <div className="admin-actions">
                                     <button className="approve-btn" onClick={() => handleApproveApp(app.id, app.type, app.targetCreatorId, app.targetSource)}>✅ 承認して変更を反映</button>
+                                    <button className="edit-btn" onClick={() => startEdit(app, 'pending')}>✏️ 修正する</button>
                                     <button className="delete-btn" onClick={() => handleDeleteApp(app.id)}>🗑 却下(削除)</button>
                                 </div>
                             </div>
@@ -352,7 +406,15 @@ const AdminPage = () => {
                         {approvedApps.map(app => (
                             <div key={app.id} className="admin-card approved">
                                 <h3>{app.name}</h3>
+                                <p><strong>タグ:</strong> {app.tags}</p>
+                                <p><strong>自己紹介:</strong> {app.description || 'なし'}</p>
+                                <div className="admin-links">
+                                    <a href={app.xUrl} target="_blank" rel="noopener noreferrer">X(Twitter)</a>
+                                    {app.youtubeUrl && <a href={app.youtubeUrl} target="_blank" rel="noopener noreferrer">YouTube</a>}
+                                    {app.twitchUrl && <a href={app.twitchUrl} target="_blank" rel="noopener noreferrer">Twitch</a>}
+                                </div>
                                 <div className="admin-actions">
+                                    <button className="edit-btn" onClick={() => startEdit(app, 'approved')}>✏️ 編集する</button>
                                     <button className="delete-btn" onClick={() => handleDeleteApp(app.id)}>🗑 掲載を取り消す(削除)</button>
                                 </div>
                             </div>
@@ -360,6 +422,81 @@ const AdminPage = () => {
                     </div>
                 )}
             </section>
+
+            {/* ====== 編集モーダル ====== */}
+            {editingItem && (
+                <div className="admin-modal-overlay">
+                    <div className="admin-modal">
+                        <h2>✏️ クリエイター情報の編集 ({editingItem.type === 'pending' ? '申請データ' : '掲載データ'})</h2>
+                        <form onSubmit={handleSaveEdit}>
+                            <div className="form-group">
+                                <label>名前</label>
+                                <input 
+                                    type="text" 
+                                    value={editForm.name} 
+                                    onChange={e => setEditForm(prev => ({ ...prev, name: e.target.value }))} 
+                                    required 
+                                />
+                            </div>
+                            <div className="form-group">
+                                <label>X (Twitter) URL</label>
+                                <input 
+                                    type="url" 
+                                    value={editForm.xUrl} 
+                                    onChange={e => setEditForm(prev => ({ ...prev, xUrl: e.target.value }))} 
+                                    required 
+                                />
+                            </div>
+                            <div className="form-group">
+                                <label>YouTube URL</label>
+                                <input 
+                                    type="url" 
+                                    value={editForm.youtubeUrl} 
+                                    onChange={e => setEditForm(prev => ({ ...prev, youtubeUrl: e.target.value }))} 
+                                />
+                            </div>
+                            <div className="form-group">
+                                <label>Twitch URL</label>
+                                <input 
+                                    type="url" 
+                                    value={editForm.twitchUrl} 
+                                    onChange={e => setEditForm(prev => ({ ...prev, twitchUrl: e.target.value }))} 
+                                />
+                            </div>
+                            <div className="form-group">
+                                <label>タグ (カンマ区切り)</label>
+                                <input 
+                                    type="text" 
+                                    value={editForm.tags} 
+                                    onChange={e => setEditForm(prev => ({ ...prev, tags: e.target.value }))} 
+                                    placeholder="例: キラー専,ナース,解説・攻略"
+                                />
+                            </div>
+                            <div className="form-group">
+                                <label>アイコン画像URL</label>
+                                <input 
+                                    type="url" 
+                                    value={editForm.avatarUrl} 
+                                    onChange={e => setEditForm(prev => ({ ...prev, avatarUrl: e.target.value }))} 
+                                />
+                            </div>
+                            <div className="form-group">
+                                <label>自己紹介 (150文字以内)</label>
+                                <textarea 
+                                    value={editForm.description} 
+                                    onChange={e => setEditForm(prev => ({ ...prev, description: e.target.value }))} 
+                                    rows="4"
+                                    maxLength="150"
+                                />
+                            </div>
+                            <div className="admin-modal-actions">
+                                <button type="button" className="cancel-btn" onClick={() => setEditingItem(null)}>キャンセル</button>
+                                <button type="submit" className="approve-btn">💾 保存する</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            )}
 
         </div>
     );

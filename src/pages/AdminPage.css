@@ -109,3 +109,119 @@
 .admin-card.video {
     border-left-color: #3498db;
 }
+
+/* 編集ボタン */
+.edit-btn {
+    background: #3498db;
+    color: white;
+}
+
+/* モーダルオーバーレイ */
+.admin-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 1rem;
+}
+
+/* モーダル本体 */
+.admin-modal {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    width: 100%;
+    max-width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    animation: modalSlideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes modalSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.admin-modal h2 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    color: var(--color-primary);
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 0.5rem;
+}
+
+/* フォームグループ */
+.admin-modal .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-bottom: 1.2rem;
+}
+
+.admin-modal .form-group label {
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: var(--color-text-dim);
+}
+
+.admin-modal .form-group input,
+.admin-modal .form-group textarea {
+    background: var(--color-background);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    color: var(--color-text);
+    padding: 0.6rem 0.8rem;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.2s;
+    font-family: var(--font-main);
+}
+
+.admin-modal .form-group input:focus,
+.admin-modal .form-group textarea:focus {
+    border-color: var(--color-primary);
+}
+
+/* モーダルのボタンエリア */
+.admin-modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 2rem;
+    border-top: 1px solid var(--color-border);
+    padding-top: 1rem;
+}
+
+.admin-modal-actions button {
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    font-size: 0.9rem;
+}
+
+.admin-modal-actions button:hover {
+    opacity: 0.85;
+}
+
+.admin-modal-actions .cancel-btn {
+    background: #555;
+    color: white;
+}
