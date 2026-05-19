@@ -640,3 +640,25 @@
     padding: 0.65rem 1.8rem;
     font-size: 0.85rem;
 }
+
+/* タグの折りたたみ・展開ボタン */
+.tag-toggle-btn {
+    display: inline-block;
+    padding: 0.18rem 0.65rem;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.08);
+    color: var(--color-text-dim);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: var(--font-main);
+    line-height: 1.2;
+}
+
+.tag-toggle-btn:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: var(--color-text);
+    border-color: rgba(255, 255, 255, 0.3);
+}

@@ -358,6 +358,7 @@ const CreatorsPage = () => {
 
 const CreatorCard = ({ creator }) => {
     const [expanded, setExpanded] = useState(false);
+    const [tagsExpanded, setTagsExpanded] = useState(false);
     const [avatarError, setAvatarError] = useState(false);
     const isLong = creator.description && creator.description.length > 80;
 
@@ -385,11 +386,23 @@ const CreatorCard = ({ creator }) => {
                     <div className="creator-name-area">
                         <h2 className="creator-name">{creator.name}</h2>
                         <div className="creator-tags">
-                            {creator.tags.map(tag => (
+                            {(tagsExpanded ? creator.tags : creator.tags.slice(0, 9)).map(tag => (
                                 <span key={tag} className={`tag-badge ${getTagColor(tag)}`}>
                                     {tag}
                                 </span>
                             ))}
+                            {creator.tags.length > 9 && (
+                                <button 
+                                    type="button" 
+                                    className="tag-toggle-btn"
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        setTagsExpanded(!tagsExpanded);
+                                    }}
+                                >
+                                    {tagsExpanded ? '閉じる ▲' : `+他${creator.tags.length - 9}件`}
+                                </button>
+                            )}
                         </div>
                     </div>
                 </div>
