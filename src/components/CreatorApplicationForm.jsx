@@ -170,8 +170,7 @@ const CreatorApplicationForm = ({ onClose }) => {
                     <p>
                         ご登録ありがとうございます。<br/>
                         なりすまし防止のため、入力いただいたX(Twitter)アカウントへ<br/>
-                        <b>DMにて簡単なご本人確認</b>を行わせていただく場合がございます。<br/>
-                        確認が完了次第、手続きを進めさせていただきます。
+                        <b>DMにて簡単なご本人確認</b>を行わせていただく場合がございます。
                     </p>
                     <button className="close-btn" onClick={onClose}>閉じる</button>
                 </div>
@@ -254,7 +253,7 @@ const CreatorApplicationForm = ({ onClose }) => {
                                 <div className="form-group">
                                     <label>X (Twitter) のURL <span className="req">必須</span></label>
                                     <input type="url" name="xUrl" value={formData.xUrl} onChange={handleChange} placeholder="例: https://x.com/..." required />
-                                    <span className="help-text">※本人確認のDMをお送りする場合があります。DMを受け取れる設定にしておいてください。</span>
+                                    <span className="help-text">※本人確認のDMをお送りする場合があります。</span>
                                 </div>
 
                                 {requestType !== 'delete' && (
