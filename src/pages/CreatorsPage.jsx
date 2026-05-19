@@ -386,12 +386,15 @@ const CreatorCard = ({ creator }) => {
                     <div className="creator-name-area">
                         <h2 className="creator-name">{creator.name}</h2>
                         <div className="creator-tags">
-                            {(tagsExpanded ? creator.tags : creator.tags.slice(0, 9)).map(tag => (
+                            {(creator.tags.length <= 8 || tagsExpanded 
+                                ? creator.tags 
+                                : creator.tags.slice(0, 6)
+                            ).map(tag => (
                                 <span key={tag} className={`tag-badge ${getTagColor(tag)}`}>
                                     {tag}
                                 </span>
                             ))}
-                            {creator.tags.length > 9 && (
+                            {creator.tags.length > 8 && (
                                 <button 
                                     type="button" 
                                     className="tag-toggle-btn"
@@ -400,7 +403,7 @@ const CreatorCard = ({ creator }) => {
                                         setTagsExpanded(!tagsExpanded);
                                     }}
                                 >
-                                    {tagsExpanded ? '閉じる ▲' : `+他${creator.tags.length - 9}件`}
+                                    {tagsExpanded ? '閉じる ▲' : `+他${creator.tags.length - 6}件`}
                                 </button>
                             )}
                         </div>
