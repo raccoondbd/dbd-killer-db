@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import killers from '../data/killers.json';
 import CustomYouTubePlaylist from '../components/CustomYouTubePlaylist';
-import TipsBoard from '../components/TipsBoard';
 import VideoSubmissionForm from '../components/VideoSubmissionForm';
 import './KillerPage.css';
 
@@ -150,8 +149,6 @@ const KillerPage = () => {
                     </ul>
                 </section>
             )}
-
-            <TipsBoard killerId={killer.id} />
 
             <VideoSubmissionForm killerId={killer.id} killerName={killer.displayName} />
 

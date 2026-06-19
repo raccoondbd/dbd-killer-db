@@ -106,6 +106,7 @@ const CreatorsPage = () => {
                         tags: tagsArray,
                         sns: sns,
                         avatarUrl: data.avatarUrl || '',
+                        isSpecialist: data.isSpecialist || false,
                         createdAt: data.createdAt ? data.createdAt.toDate() : new Date()
                     };
                 });

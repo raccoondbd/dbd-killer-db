@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { collection, query, orderBy, getDocs, doc, updateDoc, deleteDoc, getDoc } from 'firebase/firestore';
+import { collection, query, orderBy, getDocs, doc, updateDoc, deleteDoc, getDoc, deleteField } from 'firebase/firestore';
 import { signInWithPopup, onAuthStateChanged, signOut } from 'firebase/auth';
 import { db, auth, googleProvider } from '../firebase';
 import './AdminPage.css';
@@ -7,7 +7,6 @@ import './AdminPage.css';
 const AdminPage = () => {
     const [applications, setApplications] = useState([]);
     const [videos, setVideos] = useState([]);
-    const [reports, setReports] = useState([]);
     const [loading, setLoading] = useState(false);
     const [adminUser, setAdminUser] = useState(null);
     const [authChecking, setAuthChecking] = useState(true);
@@ -19,10 +18,10 @@ const AdminPage = () => {
         youtubeUrl: '',
         twitchUrl: '',
         description: '',
-        avatarUrl: ''
+        avatarUrl: '',
+        isSpecialist: false
     });
 
-    const ADMIN_UID = 'tZWguxrnhVTP9YlEMG4DQ6c0OlP2'; // 管理者のUID
 
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (user) => {
@@ -56,7 +55,6 @@ const AdminPage = () => {
             await signOut(auth);
             setApplications([]);
             setVideos([]);
-            setReports([]);
         }
     };
 
@@ -72,26 +70,6 @@ const AdminPage = () => {
             const vidQ = query(collection(db, 'videoSubmissions'), orderBy('createdAt', 'desc'));
             const vidSnap = await getDocs(vidQ);
             setVideos(vidSnap.docs.map(d => ({ id: d.id, ...d.data() })));
-
-            // 3. 通報データ
-            const repQ = query(collection(db, 'reports'), orderBy('createdAt', 'desc'));
-            const repSnap = await getDocs(repQ);
-            
-            const reportsData = [];
-            for (const rDoc of repSnap.docs) {
-                const rData = rDoc.data();
-                let commentContent = "（コメントは既に削除されています）";
-                let commentAuthor = "不明";
-                if (rData.commentId) {
-                    const cSnap = await getDoc(doc(db, 'comments', rData.commentId));
-                    if (cSnap.exists()) {
-                        commentContent = cSnap.data().content;
-                        commentAuthor = cSnap.data().authorName;
-                    }
-                }
-                reportsData.push({ id: rDoc.id, ...rData, commentContent, commentAuthor });
-            }
-            setReports(reportsData);
 
         } catch (error) {
             console.error("Error fetching data:", error);
@@ -172,7 +150,8 @@ const AdminPage = () => {
             youtubeUrl: item.youtubeUrl || '',
             twitchUrl: item.twitchUrl || '',
             description: item.description || '',
-            avatarUrl: item.avatarUrl || ''
+            avatarUrl: item.avatarUrl || '',
+            isSpecialist: item.isSpecialist || false
         });
     };
 
@@ -190,7 +169,8 @@ const AdminPage = () => {
                 youtubeUrl: editForm.youtubeUrl,
                 twitchUrl: editForm.twitchUrl,
                 description: editForm.description,
-                avatarUrl: editForm.avatarUrl
+                avatarUrl: editForm.avatarUrl,
+                isSpecialist: editForm.isSpecialist
             });
 
             alert("情報を更新しました。");
@@ -211,26 +191,7 @@ const AdminPage = () => {
         } catch (e) { alert("削除に失敗しました。"); }
     };
 
-    // --- 通報の処理 ---
-    const handleDeleteReportOnly = async (id) => {
-        if (!window.confirm("問題なしと判断し、通報だけを削除（確認済みに）しますか？")) return;
-        try {
-            await deleteDoc(doc(db, 'reports', id));
-            setReports(prev => prev.filter(r => r.id !== id));
-        } catch (e) { alert("削除に失敗しました。"); }
-    };
 
-    const handleDeleteCommentAndReport = async (reportId, commentId) => {
-        if (!window.confirm("悪質と判断し、対象の【コメント】と【通報】の両方を完全に削除しますか？")) return;
-        try {
-            if (commentId) {
-                await deleteDoc(doc(db, 'comments', commentId));
-            }
-            await deleteDoc(doc(db, 'reports', reportId));
-            setReports(prev => prev.filter(r => r.id !== reportId));
-            alert("コメントと通報を削除しました。");
-        } catch (e) { alert("削除に失敗しました。"); }
-    };
 
 
     if (authChecking) return <div className="admin-page">認証チェック中...</div>;
@@ -273,33 +234,19 @@ const AdminPage = () => {
                 <p style={{ margin: 0, color: '#ecf0f1', fontSize: '0.9rem' }}>
                     <strong>【重要】あなたの管理者UID:</strong> {adminUser.uid}<br/>
                 </p>
+                <div style={{ marginTop: '1rem' }}>
+                    <button 
+                        className="delete-btn" 
+                        onClick={handleRollbackFirestore} 
+                        disabled={isRollingBack}
+                        style={{ background: '#e74c3c', borderColor: '#c0392b', color: '#fff', padding: '0.5rem 1rem', borderRadius: '4px', cursor: 'pointer' }}
+                    >
+                        {isRollingBack ? '⚠️ ロールバック実行中...' : '⚠️ [一時的] インポートデータをロールバックする'}
+                    </button>
+                </div>
             </div>
 
-            {/* ====== 通報セクション ====== */}
-            <section className="admin-section">
-                <h2>🚨 通報されたコメント ({reports.length}件)</h2>
-                {reports.length === 0 ? <p>現在、通報はありません。</p> : (
-                    <div className="admin-card-list">
-                        {reports.map(rep => (
-                            <div key={rep.id} className="admin-card report">
-                                <p><strong>キラーID:</strong> {rep.killerId}</p>
-                                <p><strong>投稿者:</strong> {rep.commentAuthor}</p>
-                                <div style={{ background: '#1e1e1e', padding: '1rem', borderRadius: '6px', margin: '1rem 0', fontStyle: 'italic', borderLeft: '3px solid #e74c3c' }}>
-                                    {rep.commentContent}
-                                </div>
-                                <div className="admin-actions">
-                                    <button className="delete-btn" onClick={() => handleDeleteCommentAndReport(rep.id, rep.commentId)}>
-                                        🗑 コメントごと完全に削除
-                                    </button>
-                                    <button className="cancel-btn" onClick={() => handleDeleteReportOnly(rep.id)}>
-                                        ✅ 問題なし (通報のみ削除)
-                                    </button>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                )}
-            </section>
+
 
             {/* ====== クリエイター申請セクション ====== */}
             <section className="admin-section">
@@ -404,8 +351,11 @@ const AdminPage = () => {
                 {approvedApps.length === 0 ? <p>なし</p> : (
                     <div className="admin-card-list">
                         {approvedApps.map(app => (
-                            <div key={app.id} className="admin-card approved">
-                                <h3>{app.name}</h3>
+                            <div key={app.id} className="admin-card approved" style={app.isSpecialist ? { borderLeftColor: '#f39c12' } : {}}>
+                                <h3>
+                                    {app.name}
+                                    {app.isSpecialist && <span style={{ marginLeft: '0.5rem', fontSize: '0.75rem', background: '#f39c12', color: '#1a1a2e', padding: '2px 6px', borderRadius: '4px', fontWeight: 'bold' }}>⭐ スペシャリスト</span>}
+                                </h3>
                                 <p><strong>タグ:</strong> {app.tags}</p>
                                 <p><strong>自己紹介:</strong> {app.description || 'なし'}</p>
                                 <div className="admin-links">
@@ -488,6 +438,16 @@ const AdminPage = () => {
                                     rows="4"
                                     maxLength="150"
                                 />
+                            </div>
+                            <div className="form-group" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', padding: '0.75rem', background: 'rgba(243,156,18,0.1)', borderRadius: '6px', border: '1px solid rgba(243,156,18,0.3)', margin: '0.5rem 0' }}>
+                                <input 
+                                    type="checkbox" 
+                                    id="edit-is-specialist"
+                                    checked={editForm.isSpecialist} 
+                                    onChange={e => setEditForm(prev => ({ ...prev, isSpecialist: e.target.checked }))} 
+                                    style={{ width: '18px', height: '18px', margin: 0, cursor: 'pointer' }}
+                                />
+                                <label htmlFor="edit-is-specialist" style={{ margin: 0, cursor: 'pointer', color: '#f39c12', fontWeight: 'bold' }}>⭐ スペシャリスト枠（上の欄）に表示する</label>
                             </div>
                             <div className="admin-modal-actions">
                                 <button type="button" className="cancel-btn" onClick={() => setEditingItem(null)}>キャンセル</button>
