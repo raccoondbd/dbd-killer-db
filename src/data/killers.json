@@ -299,7 +299,8 @@
         "name": "氾濫するふんどし",
         "url": "https://www.youtube.com/@ふんどし_GhostFace"
       }
-    ]
+    ],
+    "isNew": true
   },
   {
     "id": "demogorgon",
@@ -735,7 +736,6 @@
     "imageName": "K43_TheSlasher_Portrait.webp",
     "description": "本名：ジェイソン・ボーヒーズ\n\n基本情報\n- 心音：32m\n- 移動速度：4.4m/s",
     "youtubePlaylistId": "PLp1FBdXwpJDXglG6nSYwyrl7VrNzvT2hR",
-    "specialists": [],
-    "isNew": true
+    "specialists": []
   }
 ]
