@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { collection, query, orderBy, getDocs, doc, updateDoc, deleteDoc, getDoc, deleteField } from 'firebase/firestore';
+import { collection, query, orderBy, getDocs, doc, updateDoc, deleteDoc, getDoc } from 'firebase/firestore';
 import { signInWithPopup, onAuthStateChanged, signOut } from 'firebase/auth';
 import { db, auth, googleProvider } from '../firebase';
 import './AdminPage.css';
@@ -10,6 +10,7 @@ const AdminPage = () => {
     const [loading, setLoading] = useState(false);
     const [adminUser, setAdminUser] = useState(null);
     const [authChecking, setAuthChecking] = useState(true);
+    const ADMIN_UID = 'tZWguxrnhVTP9YlEMG4DQ6c0OlP2';
     const [editingItem, setEditingItem] = useState(null); // { id, type }
     const [editForm, setEditForm] = useState({
         name: '',
@@ -22,41 +23,6 @@ const AdminPage = () => {
         isSpecialist: false
     });
 
-
-    useEffect(() => {
-        const unsubscribe = onAuthStateChanged(auth, (user) => {
-            if (user && user.providerData && user.providerData.length > 0) {
-                setAdminUser(user);
-            } else {
-                setAdminUser(null);
-            }
-            setAuthChecking(false);
-        });
-        return () => unsubscribe();
-    }, []);
-
-    useEffect(() => {
-        if (adminUser) {
-            fetchAllData();
-        }
-    }, [adminUser]);
-
-    const handleLogin = async () => {
-        try {
-            await signInWithPopup(auth, googleProvider);
-        } catch (error) {
-            console.error("Login failed:", error);
-            alert("ログインに失敗しました。");
-        }
-    };
-
-    const handleLogout = async () => {
-        if (window.confirm("ログアウトしますか？")) {
-            await signOut(auth);
-            setApplications([]);
-            setVideos([]);
-        }
-    };
 
     const fetchAllData = async () => {
         setLoading(true);
@@ -75,6 +41,43 @@ const AdminPage = () => {
             console.error("Error fetching data:", error);
         }
         setLoading(false);
+    };
+
+    useEffect(() => {
+        const unsubscribe = onAuthStateChanged(auth, (user) => {
+            if (user && user.providerData && user.providerData.length > 0) {
+                setAdminUser(user);
+            } else {
+                setAdminUser(null);
+            }
+            setAuthChecking(false);
+        });
+        return () => unsubscribe();
+    }, []);
+
+    useEffect(() => {
+        if (adminUser) {
+            Promise.resolve().then(() => {
+                fetchAllData();
+            });
+        }
+    }, [adminUser]);
+
+    const handleLogin = async () => {
+        try {
+            await signInWithPopup(auth, googleProvider);
+        } catch (error) {
+            console.error("Login failed:", error);
+            alert("ログインに失敗しました。");
+        }
+    };
+
+    const handleLogout = async () => {
+        if (window.confirm("ログアウトしますか？")) {
+            await signOut(auth);
+            setApplications([]);
+            setVideos([]);
+        }
     };
 
     // --- クリエイター申請の処理 ---
@@ -137,7 +140,10 @@ const AdminPage = () => {
         try {
             await deleteDoc(doc(db, 'creatorApplications', id));
             setApplications(prev => prev.filter(app => app.id !== id));
-        } catch (error) { alert("削除に失敗しました。"); }
+        } catch (error) {
+            console.error("Delete creator application failed:", error);
+            alert("削除に失敗しました。");
+        }
     };
 
     // --- 編集モード開始 ---
@@ -188,7 +194,10 @@ const AdminPage = () => {
         try {
             await deleteDoc(doc(db, 'videoSubmissions', id));
             setVideos(prev => prev.filter(v => v.id !== id));
-        } catch (e) { alert("削除に失敗しました。"); }
+        } catch (error) {
+            console.error("Delete video submission failed:", error);
+            alert("削除に失敗しました。");
+        }
     };
 
 
@@ -234,16 +243,6 @@ const AdminPage = () => {
                 <p style={{ margin: 0, color: '#ecf0f1', fontSize: '0.9rem' }}>
                     <strong>【重要】あなたの管理者UID:</strong> {adminUser.uid}<br/>
                 </p>
-                <div style={{ marginTop: '1rem' }}>
-                    <button 
-                        className="delete-btn" 
-                        onClick={handleRollbackFirestore} 
-                        disabled={isRollingBack}
-                        style={{ background: '#e74c3c', borderColor: '#c0392b', color: '#fff', padding: '0.5rem 1rem', borderRadius: '4px', cursor: 'pointer' }}
-                    >
-                        {isRollingBack ? '⚠️ ロールバック実行中...' : '⚠️ [一時的] インポートデータをロールバックする'}
-                    </button>
-                </div>
             </div>
 
 
