@@ -448,7 +448,8 @@
         "name": "荒海",
         "url": "https://www.youtube.com/@araumi56"
       }
-    ]
+    ],
+    "isNew": true
   },
   {
     "id": "cenobite",
@@ -538,7 +539,8 @@
         "name": "FirstDBD",
         "url": "https://www.twitch.tv/firstdbd"
       }
-    ]
+    ],
+    "isNew": true
   },
   {
     "id": "knight",
