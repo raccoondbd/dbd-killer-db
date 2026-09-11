@@ -28,7 +28,8 @@
     "description": "本名：フィリップ・オジョモ\n\n基本情報\n- 心音：32m\n- 移動速度：4.6m/s\n- 特徴：透明化して高速移動できる\n- 試合開始時は透明化状態\n\n嘆きの鐘\n鐘を鳴らして透明化と解除を切り替える能力。\n\n透明化状態\n- 探知不可状態になる\n- 移動速度が6.0m/sになる\n- 生存者との攻撃・インタラクト不可\n- オブジェクトとのインタラクトは可能\n- 20m以上離れると完全透明化\n- 20m以内では半透明化\n- 静止すると完全透明化\n\n透明化解除\n- パワーボタン長押しで解除\n- 解除時間：3秒\n- 鐘の音は解除開始1.5秒後から鳴る\n- 解除中移動速度：1.6m/s\n- 解除後1秒間、移動速度150%\n- 解除後速度：6.9m/s\n\n透明化\n- パワーボタン長押しで透明化\n- 透明化時間：1.5秒\n- 移動速度低下なし\n\n鐘の音\n- 鐘の可聴範囲：24m\n- 変身時の風切り音範囲：40m\n\nスタン時仕様\n- 透明化中にスタンすると強制解除\n- スタン時間：4秒\n\nその他仕様\n- 通常移動速度：4.6m/s\n- 透明化中移動速度：6.0m/s\n- 透明化解除後加速速度：6.9m/s\n- 透明化中スタンで強制解除",
     "youtubePlaylistId": "PLp1FBdXwpJDUjp6IWFme9WO--6zAcD_4F",
     "enjoyPlaylistId": "PLp1FBdXwpJDW7pKbZhMJEhimpndRAWRkN",
-    "specialists": []
+    "specialists": [],
+    "isNew": true
   },
   {
     "id": "hillbilly",
@@ -606,8 +607,7 @@
         "name": "Cinthean",
         "url": "https://www.twitch.tv/cinthean"
       }
-    ],
-    "isNew": true
+    ]
   },
   {
     "id": "good_guy",
